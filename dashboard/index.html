@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntegralFlex Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <style>
+    body{background:#eef5ff;margin:0}
+    .frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .side{background:linear-gradient(180deg,#0b2c6b,#08214c);padding:24px;color:#fff}
+    .side nav a{display:block;color:#d6e6ff;text-decoration:none;margin:10px 0;padding:12px 14px;border-radius:12px}
+    .side nav a.active{background:rgba(255,255,255,.12)}
+    .main{padding:24px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cards .metric{min-height:120px}
+    @media(max-width:900px){.frame{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <aside class="side">
+      <div class="mini-brand">
+        <div class="brand-mark">IF</div>
+        <div><strong>IntegralFlex</strong><span>PLATFORM</span></div>
+      </div>
+      <nav>
+        <a class="active" href="#">Dashboard</a>
+        <a href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer">ServiceDesk</a>
+        <a href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer">LogisDesk</a>
+        <a href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer">CentralDesk</a>
+        <a href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer">CertiDesk</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <h1>Dashboard IntegralFlex</h1>
+      <p class="muted">Vista base para continuar el desarrollo interno y enlazar los módulos reales.</p>
+      <div class="cards">
+        <div class="metric blue"><strong>243</strong><span>Tickets activos</span></div>
+        <div class="metric green"><strong>128</strong><span>Vehículos en ruta</span></div>
+        <div class="metric orange"><strong>2.847</strong><span>Documentos</span></div>
+        <div class="metric teal"><strong>36</strong><span>Certificados por vencer</span></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
