@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IntegralFlex Suites | Integración Empresarial Modular y Escalable</title>
-  <meta name="description" content="Plataforma comercial de IntegralFlex Suites. Integra ServiceDesk, LogisDesk, CentralDesk y CertiDesk en un ecosistema empresarial modular." />
+  <meta name="description" content="Suite empresarial modular para integrar soporte, logística, documentación y certificados en una sola experiencia." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a href="/" class="brand">
+      <a href="#inicio" class="brand">
         <div class="brand-mark">IF</div>
         <div class="brand-text">
           <strong>IntegralFlex</strong>
@@ -20,8 +20,8 @@
 
       <nav class="main-nav">
         <a href="#inicio">Inicio</a>
-        <a href="#suites">Suites</a>
-        <a href="#soluciones">Soluciones</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#beneficios">Beneficios</a>
         <a href="#clientes">Clientes</a>
         <a href="#precios">Precios</a>
         <a href="#empresa">Empresa</a>
@@ -36,53 +36,102 @@
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero hero-v2" id="inicio">
       <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="pill">✔ Plataforma líder en Chile</div>
-        <h1>IntegralFlex Suites</h1>
-        <h2>Integración Empresarial Modular y Escalable</h2>
-        <p>
-          Una sola plataforma que integra logística, certificados, documentación y soporte técnico
-          en un ecosistema 100% conectado.
-        </p>
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/login/">Acceder a la Plataforma</a>
-          <a class="btn btn-light" href="#suites">Conocer las Suites</a>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="pill">✔ Plataforma empresarial modular</div>
+          <h1>IntegralFlex Suites</h1>
+          <h2>Integración Empresarial Modular y Escalable</h2>
+          <p>
+            Una plataforma comercial diseñada para conectar soporte, logística, documentación
+            y gestión de certificados en un ecosistema moderno, flexible y listo para crecer contigo.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/login/">Acceder a la Plataforma</a>
+            <a class="btn btn-light" href="#modulos">Conocer las Suites</a>
+          </div>
+
+          <ul class="hero-bullets">
+            <li>Cloud + On-Premise</li>
+            <li>Integración vía API</li>
+            <li>Escalable por módulos</li>
+          </ul>
         </div>
 
-        <div class="modules-grid" id="suites">
-          <article class="module-card service">
+        <div class="hero-visual">
+          <div class="hero-window">
+            <div class="window-top">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="visual-grid">
+              <a class="visual-card service" href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer">
+                <div class="visual-icon">🎧</div>
+                <strong>ServiceDesk</strong>
+                <span>Soporte y Mesa de Ayuda</span>
+              </a>
+              <a class="visual-card central" href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer">
+                <div class="visual-icon">📁</div>
+                <strong>CentralDesk</strong>
+                <span>Documentación Centralizada</span>
+              </a>
+              <a class="visual-card certi" href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer">
+                <div class="visual-icon">🪪</div>
+                <strong>CertiDesk</strong>
+                <span>Gestión de Certificados</span>
+              </a>
+              <a class="visual-card logis" href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer">
+                <div class="visual-icon">🚚</div>
+                <strong>LogisDesk</strong>
+                <span>Logística y Transporte</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="modules-grid" id="modulos">
+          <article class="module-card service reveal">
             <div class="module-icon">🎧</div>
             <h3>ServiceDesk</h3>
             <p>Mesa de ayuda y soporte</p>
-            <small>Tickets • SLA • Base Conocimiento</small>
-            <a href="/login/" class="mini-btn">Ingresar</a>
+            <small>Tickets • SLA • Base de conocimiento</small>
+            <div class="module-actions">
+              <a href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer" class="mini-btn">Abrir módulo</a>
+            </div>
           </article>
 
-          <article class="module-card logis">
+          <article class="module-card logis reveal">
             <div class="module-icon">🚚</div>
             <h3>LogisDesk</h3>
             <p>Logística y Transporte</p>
-            <small>Flotas • Rutas • GPS</small>
-            <a href="/login/" class="mini-btn">Ingresar</a>
+            <small>Flotas • Rutas • Seguimiento operativo</small>
+            <div class="module-actions">
+              <a href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer" class="mini-btn">Abrir módulo</a>
+            </div>
           </article>
 
-          <article class="module-card central">
+          <article class="module-card central reveal">
             <div class="module-icon">📁</div>
             <h3>CentralDesk</h3>
             <p>Documentación Centralizada</p>
-            <small>Archivos • Workflows • Firma Digital</small>
-            <a href="/login/" class="mini-btn">Ingresar</a>
+            <small>Archivos • Workflows • Control documental</small>
+            <div class="module-actions">
+              <a href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer" class="mini-btn">Abrir módulo</a>
+            </div>
           </article>
 
-          <article class="module-card certi">
+          <article class="module-card certi reveal">
             <div class="module-icon">🪪</div>
             <h3>CertiDesk</h3>
             <p>Gestión de Certificados</p>
             <small>ISO • Vigencias • Alertas</small>
-            <a href="/login/" class="mini-btn">Ingresar</a>
+            <div class="module-actions">
+              <a href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer" class="mini-btn">Abrir módulo</a>
+            </div>
           </article>
         </div>
       </div>
@@ -90,24 +139,12 @@
 
     <section class="stats-bar">
       <div class="container stats-grid">
-        <div class="stat-box">
-          <strong>+500</strong>
-          <span>Empresas</span>
-        </div>
-        <div class="stat-box">
-          <strong>+120.000</strong>
-          <span>Usuarios Activos</span>
-        </div>
-        <div class="stat-box">
-          <strong>99,9%</strong>
-          <span>Disponibilidad</span>
-        </div>
-        <div class="stat-box">
-          <strong>24/7</strong>
-          <span>Soporte</span>
-        </div>
+        <div class="stat-box reveal"><strong>+500</strong><span>Empresas</span></div>
+        <div class="stat-box reveal"><strong>+120.000</strong><span>Usuarios Activos</span></div>
+        <div class="stat-box reveal"><strong>99,9%</strong><span>Disponibilidad</span></div>
+        <div class="stat-box reveal"><strong>24/7</strong><span>Soporte</span></div>
       </div>
-      <p class="stats-footnote">Integración vía API • Cloud o On-Premise • Cumple normativas chilenas</p>
+      <p class="stats-footnote">Plataforma unificada • Integración API • Cloud o On-Premise • Enfoque empresarial real</p>
     </section>
 
     <section class="trusted" id="clientes">
@@ -124,25 +161,25 @@
       </div>
     </section>
 
-    <section class="solution-section" id="soluciones">
+    <section class="solution-section" id="beneficios">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>Una suite, múltiples soluciones</h2>
-          <p>Diseñada para empresas que necesitan crecer integrando operaciones, control documental, soporte y gestión regulatoria.</p>
+          <p>La propuesta comercial de IntegralFlex está diseñada para mostrar tus productos reales como un ecosistema integrado y escalable.</p>
         </div>
 
         <div class="feature-grid">
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <h3>Arquitectura modular</h3>
-            <p>Activa solo los módulos que necesitas hoy y suma nuevos componentes conforme tu operación crece.</p>
+            <p>Presenta tus plataformas como componentes de una misma suite, fortaleciendo marca, venta cruzada y posicionamiento corporativo.</p>
           </article>
-          <article class="feature-card">
-            <h3>Integración empresarial</h3>
-            <p>Conecta APIs, procesos internos, soporte operativo y trazabilidad documental en una sola experiencia.</p>
+          <article class="feature-card reveal">
+            <h3>Acceso centralizado</h3>
+            <p>Desde el sitio principal los usuarios pueden navegar hacia los módulos reales sin mezclar la landing comercial con la autenticación.</p>
           </article>
-          <article class="feature-card">
-            <h3>Portal unificado</h3>
-            <p>Un acceso central para usuarios, administración, monitoreo y apertura de módulos especializados.</p>
+          <article class="feature-card reveal">
+            <h3>Escalabilidad comercial</h3>
+            <p>La página está lista para sumar futuros productos como nuevas suites, tableros o portales especializados.</p>
           </article>
         </div>
       </div>
@@ -150,17 +187,17 @@
 
     <section class="preview-panels">
       <div class="container panels-grid">
-        <article class="panel login-preview">
+        <article class="panel login-preview reveal">
           <div class="panel-badge green">Portal Login Unificado</div>
           <div class="panel-card">
-            <div class="mini-brand">
+            <div class="mini-brand" style="color:#10213e">
               <div class="brand-mark">IF</div>
               <div>
                 <strong>IntegralFlex</strong>
-                <span>SUITES</span>
+                <span style="color:#6a7d95">SUITES</span>
               </div>
             </div>
-            <p class="panel-subtitle">Integración Empresarial Modular y Escalable</p>
+            <p class="panel-subtitle">Acceso desacoplado del sitio comercial</p>
             <div class="login-tabs">
               <button class="tab active">Iniciar Sesión</button>
               <button class="tab">SSO / Empresa</button>
@@ -176,7 +213,7 @@
           </div>
         </article>
 
-        <article class="panel dashboard-preview">
+        <article class="panel dashboard-preview reveal">
           <div class="panel-badge orange">Dashboard / Plataforma</div>
           <div class="dashboard-shell">
             <aside class="dashboard-sidebar">
@@ -197,36 +234,24 @@
               </nav>
               <div class="uptime-box">
                 <strong>99,9%</strong>
-                <span>Sistema Operativo</span>
+                <span>Sistema operativo</span>
               </div>
             </aside>
 
             <div class="dashboard-main">
               <div class="dashboard-topbar">
                 <div class="search">Buscar en toda la plataforma...</div>
-                <div class="user-chip">Carlos Muñoz · Administrador</div>
+                <div class="user-chip">Administrador · IntegralFlex</div>
               </div>
 
-              <h3>Bienvenido, Carlos 👋</h3>
-              <p class="muted">Empresa: Transportes Andinos S.A.</p>
+              <h3>Dashboard Comercial</h3>
+              <p class="muted">Vista base para seguir integrando módulos, métricas y accesos directos.</p>
 
               <div class="dashboard-metrics">
-                <div class="metric blue">
-                  <strong>243</strong>
-                  <span>Tickets activos</span>
-                </div>
-                <div class="metric green">
-                  <strong>128</strong>
-                  <span>Vehículos en ruta</span>
-                </div>
-                <div class="metric orange">
-                  <strong>2.847</strong>
-                  <span>Documentos</span>
-                </div>
-                <div class="metric teal">
-                  <strong>36</strong>
-                  <span>Certificados por vencer</span>
-                </div>
+                <div class="metric blue"><strong>243</strong><span>Tickets activos</span></div>
+                <div class="metric green"><strong>128</strong><span>Vehículos en ruta</span></div>
+                <div class="metric orange"><strong>2.847</strong><span>Documentos</span></div>
+                <div class="metric teal"><strong>36</strong><span>Certificados por vencer</span></div>
               </div>
 
               <div class="activity-grid">
@@ -234,17 +259,19 @@
                   <h4>Actividad reciente</h4>
                   <ul>
                     <li>Ticket #TK-2024-5892 — Nuevo ticket de soporte</li>
-                    <li>Camión BQ-RT-32 — Llegó a destino</li>
+                    <li>Camión RT-32 — Llegó a destino</li>
                     <li>Certificado ISO 9001 — Vence en 12 días</li>
-                    <li>24 documentos firmados hoy</li>
+                    <li>24 documentos procesados hoy</li>
                   </ul>
                 </div>
                 <div class="activity-card">
-                  <h4>Uso de Plataforma</h4>
-                  <div class="chart">
-                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                  <h4>Accesos rápidos</h4>
+                  <div class="quick-links">
+                    <a href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer">Abrir ServiceDesk</a>
+                    <a href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer">Abrir LogisDesk</a>
+                    <a href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer">Abrir CentralDesk</a>
+                    <a href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer">Abrir CertiDesk</a>
                   </div>
-                  <small>ServiceDesk · LogisDesk · CentralDesk · CertiDesk</small>
                 </div>
               </div>
             </div>
@@ -255,37 +282,37 @@
 
     <section class="pricing" id="precios">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>Planes para cada etapa de crecimiento</h2>
-          <p>Comienza con un módulo y escala a una plataforma empresarial completa.</p>
+          <p>Comienza con un módulo, vende una solución y escala a una plataforma empresarial completa.</p>
         </div>
 
         <div class="pricing-grid">
-          <article class="price-card">
+          <article class="price-card reveal">
             <h3>Starter</h3>
             <strong>1 módulo</strong>
-            <p>Ideal para operaciones que quieren digitalizar un proceso crítico.</p>
+            <p>Ideal para organizaciones que digitalizan una necesidad específica.</p>
           </article>
-          <article class="price-card featured">
+          <article class="price-card featured reveal">
             <span class="featured-badge">Más solicitado</span>
             <h3>Business</h3>
             <strong>3 módulos</strong>
-            <p>Para empresas que requieren integración real entre soporte, logística y documentos.</p>
+            <p>Para empresas que buscan integración real entre áreas operativas y de soporte.</p>
           </article>
-          <article class="price-card">
+          <article class="price-card reveal">
             <h3>Enterprise</h3>
             <strong>Suite completa</strong>
-            <p>Orquestación avanzada, administración central y despliegue cloud u on-premise.</p>
+            <p>Orientado a compañías con necesidades de control, trazabilidad e integración total.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="cta-section" id="contacto">
-      <div class="container cta-box">
+      <div class="container cta-box reveal">
         <div>
-          <h2>¿Listo para unificar tus plataformas?</h2>
-          <p>Solicita una demo de IntegralFlex Suites y descubre cómo integrar tus procesos críticos en una sola plataforma.</p>
+          <h2>¿Listo para mostrar tus plataformas como una suite real?</h2>
+          <p>Esta versión 2 está orientada al posicionamiento comercial de tus módulos reales, con accesos directos y estructura lista para crecer.</p>
         </div>
         <div class="cta-actions">
           <a class="btn btn-success" href="mailto:contacto@integralflex.cl">Solicitar Demo</a>
@@ -305,19 +332,19 @@
             <span>SUITES</span>
           </div>
         </div>
-        <p>Integración empresarial modular y escalable para operaciones que necesitan trazabilidad, soporte y crecimiento tecnológico.</p>
+        <p>Portal comercial unificado para presentar ServiceDesk, LogisDesk, CentralDesk y CertiDesk como parte de una sola propuesta de valor.</p>
       </div>
       <div>
-        <h4>Suites</h4>
-        <a href="#suites">ServiceDesk</a>
-        <a href="#suites">LogisDesk</a>
-        <a href="#suites">CentralDesk</a>
-        <a href="#suites">CertiDesk</a>
+        <h4>Módulos</h4>
+        <a href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer">ServiceDesk</a>
+        <a href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer">LogisDesk</a>
+        <a href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer">CentralDesk</a>
+        <a href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer">CertiDesk</a>
       </div>
       <div>
         <h4>Plataforma</h4>
         <a href="/login/">Iniciar Sesión</a>
-        <a href="#soluciones">Soluciones</a>
+        <a href="#beneficios">Beneficios</a>
         <a href="#precios">Precios</a>
       </div>
       <div>
@@ -329,9 +356,11 @@
     </div>
     <div class="container footer-bottom">
       <span>IntegralFlex Suites © 2026</span>
-      <span>Versión Comercial</span>
+      <span>Versión 2 Comercial</span>
       <span>Soporte 24/7</span>
     </div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
