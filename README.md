@@ -1,21 +1,15 @@
-# IntegralFlex Platform
+# IntegralFlex Suites
 
-Proyecto listo para subir a GitHub y desplegar en Netlify.
+Sitio comercial principal inspirado en el mockup entregado.
 
 ## Estructura
-- `/login` acceso a la plataforma
-- `/dashboard` panel base de módulos
-- `/netlify/functions/login.js` autenticación PostgreSQL
+- `/index.html` → landing comercial
+- `/login/index.html` → portal separado
+- `/dashboard/index.html` → vista ejemplo
+- `/assets/css/styles.css` → estilos globales
 
-## Variables recomendadas en Netlify
-- `DB_HOST`
-- `DB_PORT`
-- `DB_NAME`
-- `DB_USER`
-- `DB_PASSWORD`
+## Deploy en Netlify
+Publica la raíz del proyecto como sitio estático.
 
-## Base configurada
-- Host: `4.186.27.1`
-- Base: `logindb`
-- Schema: `public`
-- Tabla: `usuarios`
+## Nota
+La landing comercial no valida credenciales. El login quedó desacoplado del sitio principal.

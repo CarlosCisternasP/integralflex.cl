@@ -3,67 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IntegralFlex | Dashboard</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>IntegralFlex Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <style>
+    body{background:#eef5ff;margin:0}
+    .frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .side{background:linear-gradient(180deg,#0b2c6b,#08214c);padding:24px;color:#fff}
+    .side nav a{display:block;color:#d6e6ff;text-decoration:none;margin:10px 0;padding:12px 14px;border-radius:12px}
+    .side nav a.active{background:rgba(255,255,255,.12)}
+    .main{padding:24px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cards .metric{min-height:120px}
+    @media(max-width:900px){.frame{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.cards{grid-template-columns:1fr}}
+  </style>
 </head>
-<body class="dashboard-body">
-  <main class="dashboard-shell">
-    <aside class="sidebar">
-      <div class="sidebar-brand">IntegralFlex</div>
+<body>
+  <div class="frame">
+    <aside class="side">
+      <div class="mini-brand">
+        <div class="brand-mark">IF</div>
+        <div><strong>IntegralFlex</strong><span>PLATFORM</span></div>
+      </div>
       <nav>
-        <a href="#">Dashboard</a>
-        <a href="#modules">Módulos</a>
-        <a href="#support">Soporte</a>
+        <a class="active" href="#">Dashboard</a>
+        <a href="#">ServiceDesk</a>
+        <a href="#">LogisDesk</a>
+        <a href="#">CentralDesk</a>
+        <a href="#">CertiDesk</a>
       </nav>
     </aside>
-
-    <section class="dashboard-content">
-      <header class="dashboard-header">
-        <div>
-          <h1>IntegralFlex Platform</h1>
-          <p>Suite modular empresarial</p>
-        </div>
-        <button id="logoutBtn" class="secondary-btn">Cerrar sesión</button>
-      </header>
-
-      <section class="hero-panel">
-        <div>
-          <span class="badge">Plataforma activa</span>
-          <h2>Un solo acceso para toda tu operación</h2>
-          <p>Gestiona documentación, certificados, logística y soporte desde una misma plataforma.</p>
-        </div>
-      </section>
-
-      <section id="modules" class="module-grid">
-        <article class="module-card">
-          <h3>CentralDesk</h3>
-          <p>Documentación centralizada y acceso controlado.</p>
-        </article>
-        <article class="module-card">
-          <h3>CertiDesk</h3>
-          <p>Gestión de certificados y control documental.</p>
-        </article>
-        <article class="module-card">
-          <h3>LogisDesk</h3>
-          <p>Operación logística y seguimiento de transporte.</p>
-        </article>
-        <article class="module-card">
-          <h3>ServiceDesk</h3>
-          <p>Mesa de ayuda, tickets y soporte técnico.</p>
-        </article>
-      </section>
-    </section>
-  </main>
-
-  <script>
-    const user = localStorage.getItem('integralflex_user');
-    if (!user) {
-      window.location.href = '/login/';
-    }
-    document.getElementById('logoutBtn').addEventListener('click', () => {
-      localStorage.removeItem('integralflex_user');
-      window.location.href = '/login/';
-    });
-  </script>
+    <main class="main">
+      <h1>Dashboard IntegralFlex</h1>
+      <p class="muted">Vista de ejemplo para continuar el desarrollo interno.</p>
+      <div class="cards">
+        <div class="metric blue"><strong>243</strong><span>Tickets activos</span></div>
+        <div class="metric green"><strong>128</strong><span>Vehículos en ruta</span></div>
+        <div class="metric orange"><strong>2.847</strong><span>Documentos</span></div>
+        <div class="metric teal"><strong>36</strong><span>Certificados por vencer</span></div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
