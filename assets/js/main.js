@@ -1,10 +1,7 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   const revealItems = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
+    entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   revealItems.forEach((item) => observer.observe(item));
 
@@ -28,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const canvas = document.getElementById('networkCanvas');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
   let particles = [];
   function resize() {
@@ -35,10 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.height = window.innerHeight;
     const count = Math.min(65, Math.floor(window.innerWidth / 24));
     particles = Array.from({length: count}, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4
+      x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4
     }));
   }
   function draw() {
@@ -47,29 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
       p.x += p.vx; p.y += p.vy;
       if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
       if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(130,180,255,0.6)';
-      ctx.fill();
+      ctx.beginPath(); ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(130,180,255,0.6)'; ctx.fill();
     }
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const a = particles[i], b = particles[j];
-        const dx = a.x - b.x, dy = a.y - b.y;
-        const d = Math.hypot(dx, dy);
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
         if (d < 140) {
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(90,150,255,${0.14 - d / 1400})`;
-          ctx.lineWidth = 1;
-          ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(90,150,255,${0.14 - d / 1400})`; ctx.lineWidth = 1; ctx.stroke();
         }
       }
     }
     requestAnimationFrame(draw);
   }
   window.addEventListener('resize', resize);
-  resize();
-  draw();
+  resize(); draw();
 });

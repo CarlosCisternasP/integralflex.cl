@@ -1,28 +1,8 @@
-# IntegralFlex Platform Backend
+# IntegralFlex Netlify Frontend
 
-Incluye:
-- sitio comercial Flask como página principal
-- login separado en `/login`
-- dashboard en `/app`
-- autenticación central con PostgreSQL
-- SSO por JWT para LogisDesk, CertiDesk y CentralDesk
-- ejemplos de endpoints `/sso/login` para módulos
+Sube este ZIP a GitHub y conecta el repo a Netlify.
 
-## Instalar
-```bash
-pip install -r requirements.txt
-cp .env.example .env
-```
+Build command: vacío
+Publish directory: .
 
-## Ejecutar
-```bash
-python portal_app/app.py
-```
-
-## URLs
-- `/` sitio comercial
-- `/login` acceso
-- `/app` dashboard
-
-## Nota
-Para LogisDesk, CertiDesk y CentralDesk debes integrar el ejemplo de SSO en sus apps Flask reales.
+La página principal es comercial y el botón Acceder apunta a https://app.integralflex.cl/login
