@@ -1,17 +1,7 @@
-# IntegralFlex Suites - Futuristic Edition
+# IntegralFlex Suites - Futuristic Edition v2
 
-Proyecto comercial futurista y robusto basado en el logo proporcionado y en toda la estrategia definida en esta conversación.
-
-## Incluye
-- landing comercial premium
-- portal separado
-- dashboard base
-- branding IntegralFlex aplicado
-- enlaces reales a:
-  - https://www.servicesdesk.cl/
-  - http://4.186.27.1:5005/
-  - http://portaldocumental.hidronor.cl/
-  - https://www.certidesk.cl/
-
-## Deploy
-Publica la raíz del proyecto en Netlify.
+Ajustes aplicados según feedback:
+- cabecera blanca para uniformar con el logo
+- menús con más efectos hover
+- CTA final corregido con mejor balance visual
+- misma estructura comercial + portal separado + dashboard base

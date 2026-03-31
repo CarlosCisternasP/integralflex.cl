@@ -15,13 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.style.display = current === 'none' ? 'flex' : 'none';
       nav.style.flexDirection = 'column';
       nav.style.position = 'absolute';
-      nav.style.top = '86px';
+      nav.style.top = '96px';
       nav.style.left = '4%';
       nav.style.right = '4%';
       nav.style.padding = '18px';
-      nav.style.background = 'rgba(4,17,36,.96)';
-      nav.style.border = '1px solid rgba(255,255,255,.08)';
+      nav.style.background = '#ffffff';
+      nav.style.border = '1px solid rgba(16,33,62,.08)';
       nav.style.borderRadius = '18px';
+      nav.style.boxShadow = '0 14px 30px rgba(0,0,0,.08)';
     });
   }
 });
