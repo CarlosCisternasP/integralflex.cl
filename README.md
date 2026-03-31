@@ -1,1 +1,3 @@
-# IntegralFlex V8 SaaS Comercial\n\nLanding comercial como página principal, login separado en /login y dashboard en /app.
+# IntegralFlex V7 Demo Comercial
+
+Versión enfocada en storytelling comercial, demo visual y venta por módulos.
