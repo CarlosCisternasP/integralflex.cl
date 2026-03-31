@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   const revealItems = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
