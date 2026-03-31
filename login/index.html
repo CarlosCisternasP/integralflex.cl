@@ -1,1 +1,164 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>IntegralFlex Portal</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap' rel='stylesheet'><link rel='stylesheet' href='../assets/css/styles.css' /><style>body{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at top,#0a2345 0%,#041124 55%)}.login-shell{width:min(520px,92%);padding:18px;border-radius:32px;background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10);box-shadow:0 18px 50px rgba(0,0,0,.28)}.login-card{background:#fff;border-radius:26px;padding:30px;color:#10213e}.login-logo{height:82px;margin:0 auto 10px;background:#fff;border-radius:12px;padding:6px}.login-card h1{margin:0 0 8px;text-align:center;font-size:2rem}.login-card p{text-align:center;color:#60728d;line-height:1.7}.field{margin:14px 0}.field label{display:block;font-weight:700;margin-bottom:8px}.field input{width:100%;padding:14px 16px;border-radius:16px;border:1px solid #d9e7ff;font:inherit}.portal-actions{display:grid;gap:12px;margin-top:18px}.back{display:block;text-align:center;margin-top:18px;color:#2563eb;text-decoration:none;font-weight:800}</style></head><body><div class='login-shell'><div class='login-card'><img src='../assets/img/logo-integralflex.png' alt='IntegralFlex Suites' class='login-logo' /><h1>Portal IntegralFlex</h1><p>Portal interno desacoplado del sitio comercial. Aquí puedes integrar autenticación real, SSO o acceso multiempresa cuando decidas implementarlo.</p><div class='field'><label>Correo electrónico o RUT</label><input type='text' placeholder='13991430-9' /></div><div class='field'><label>Contraseña</label><input type='password' placeholder='••••••••••' /></div><div class='portal-actions'><a href='../dashboard/' class='btn btn-primary'>Ingresar a la plataforma</a><a href='../index.html' class='btn btn-secondary' style='color:#10213e'>Volver al sitio comercial</a></div><a href='../index.html' class='back'>← Regresar</a></div></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntegralFlex Suites - Integración Empresarial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1727;
+            color: white;
+        }
+
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(11, 23, 39, 0.8), rgba(11, 23, 39, 1)), 
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Gradientes para las tarjetas */
+        .bg-servicedesk { background: linear-gradient(135deg, #007bff, #0056b3); }
+        .bg-logisdesk { background: linear-gradient(135deg, #28a745, #1e7e34); }
+        .bg-centraldesk { background: linear-gradient(135deg, #fd7e14, #d35400); }
+        .bg-certidesk { background: linear-gradient(135deg, #198754, #146c43); }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <nav class="absolute w-full z-50 px-6 py-4 flex justify-between items-center border-b border-white/10">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+                <i class="fa-solid fa-globe text-white text-xl"></i>
+            </div>
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">IntegralFlex<sup class="text-xs">®</sup></h1>
+                <p class="text-[0.6rem] tracking-widest text-blue-300 uppercase">S u i t e s</p>
+            </div>
+        </div>
+        
+        <div class="hidden md:flex gap-6 text-sm font-medium text-gray-200">
+            <a href="#inicio" class="hover:text-white transition">Inicio</a>
+            <a href="#suites" class="hover:text-white transition">Suites</a>
+            <a href="#" class="hover:text-white transition">Soluciones</a>
+            <a href="#" class="hover:text-white transition">Clientes</a>
+            <a href="#" class="hover:text-white transition">Precios</a>
+            <a href="#" class="hover:text-white transition">Empresa</a>
+            <a href="mailto:contacto@integralflex.cl" class="hover:text-white transition">Contacto</a>
+        </div>
+
+        <div class="flex gap-3">
+            <a href="/login/" class="px-5 py-2 rounded-full border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition text-sm font-semibold">Iniciar Sesión</a>
+            <a href="mailto:contacto@integralflex.cl" class="px-5 py-2 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white transition text-sm font-semibold shadow-lg shadow-emerald-500/30">Solicitar Demo</a>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-bg pt-32 pb-20 px-6 text-center relative flex-grow flex flex-col justify-center items-center">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold mb-6 border border-emerald-500/30">
+            <i class="fa-solid fa-check"></i> PLATAFORMA LÍDER EN CHILE
+        </div>
+
+        <h2 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">Integral<span class="text-blue-400">Flex</span> Suites</h2>
+        <h3 class="text-xl md:text-2xl text-gray-300 font-light mb-6">Integración Empresarial Modular y Escalable</h3>
+        <p class="max-w-2xl mx-auto text-gray-400 mb-10 text-sm md:text-base">
+            Una sola plataforma que integra logística, certificados, documentación y soporte técnico en un ecosistema 100% conectado.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-16">
+            <a href="/login/" class="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold flex items-center justify-center gap-2 transition shadow-lg shadow-blue-600/30">
+                <i class="fa-solid fa-rocket"></i> Acceder a la Plataforma
+            </a>
+            <a href="#suites" class="px-8 py-3 rounded-full bg-white text-blue-900 hover:bg-gray-100 font-semibold transition shadow-lg">
+                Conocer las Suites
+            </a>
+        </div>
+
+        <div id="suites" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto w-full z-10 relative">
+            
+            <div class="bg-servicedesk rounded-2xl p-6 text-center shadow-2xl border border-white/10 card-hover transition duration-300 flex flex-col justify-between">
+                <div>
+                    <i class="fa-solid fa-headset text-4xl mb-4 text-white/90"></i>
+                    <h4 class="text-xl font-bold mb-1">ServiceDesk</h4>
+                    <p class="text-sm text-blue-100 mb-4">Mesa de ayuda y soporte</p>
+                    <div class="text-xs text-blue-200 bg-black/20 py-2 rounded-lg mb-6">
+                        Tickets • SLA • Base Conocimiento
+                    </div>
+                </div>
+                <a href="https://www.servicesdesk.cl/" target="_blank" class="w-full block py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-semibold transition">Ingresar &rarr;</a>
+            </div>
+
+            <div class="bg-logisdesk rounded-2xl p-6 text-center shadow-2xl border border-white/10 card-hover transition duration-300 flex flex-col justify-between">
+                <div>
+                    <i class="fa-solid fa-truck-fast text-4xl mb-4 text-white/90"></i>
+                    <h4 class="text-xl font-bold mb-1">LogisDesk</h4>
+                    <p class="text-sm text-green-100 mb-4">Logística y Transporte</p>
+                    <div class="text-xs text-green-200 bg-black/20 py-2 rounded-lg mb-6">
+                        Flotas • Rutas • GPS
+                    </div>
+                </div>
+                <a href="http://4.186.27.1:5005/" target="_blank" class="w-full block py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-semibold transition">Ingresar &rarr;</a>
+            </div>
+
+            <div class="bg-centraldesk rounded-2xl p-6 text-center shadow-2xl border border-white/10 card-hover transition duration-300 flex flex-col justify-between">
+                <div>
+                    <i class="fa-solid fa-folder-open text-4xl mb-4 text-white/90"></i>
+                    <h4 class="text-xl font-bold mb-1">CentralDesk</h4>
+                    <p class="text-sm text-orange-100 mb-4">Documentación Centralizada</p>
+                    <div class="text-xs text-orange-200 bg-black/20 py-2 rounded-lg mb-6">
+                        Archivos • Workflows • Firma Digital
+                    </div>
+                </div>
+                <a href="http://portaldocumental.hidronor.cl/" target="_blank" class="w-full block py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-semibold transition">Ingresar &rarr;</a>
+            </div>
+
+            <div class="bg-certidesk rounded-2xl p-6 text-center shadow-2xl border border-white/10 card-hover transition duration-300 flex flex-col justify-between">
+                <div>
+                    <i class="fa-solid fa-certificate text-4xl mb-4 text-white/90"></i>
+                    <h4 class="text-xl font-bold mb-1">CertiDesk</h4>
+                    <p class="text-sm text-emerald-100 mb-4">Gestión de Certificados</p>
+                    <div class="text-xs text-emerald-200 bg-black/20 py-2 rounded-lg mb-6">
+                        ISO • Vigencias • Alertas
+                    </div>
+                </div>
+                <a href="https://www.certidesk.cl/" target="_blank" class="w-full block py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-semibold transition">Ingresar &rarr;</a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="bg-blue-900/40 border-y border-blue-500/20 backdrop-blur-sm relative z-20">
+        <div class="max-w-6xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x divide-white/10">
+            <div>
+                <div class="text-2xl md:text-3xl font-bold">+500</div>
+                <div class="text-xs text-blue-200">Empresas</div>
+            </div>
+            <div>
+                <div class="text-2xl md:text-3xl font-bold">+120.000</div>
+                <div class="text-xs text-blue-200">Usuarios Activos</div>
+            </div>
+            <div>
+                <div class="text-2xl md:text-3xl font-bold">99,9%</div>
+                <div class="text-xs text-blue-200">Disponibilidad</div>
+            </div>
+            <div>
+                <div class="text-2xl md:text-3xl font-bold">24/7</div>
+                <div class="text-xs text-blue-200">Soporte</div>
+            </div>
+        </div>
+        <div class="bg-blue-950/80 py-3 text-center text-xs text-gray-300 tracking-wide border-t border-white/5">
+            Integración vía API • Cloud o On-Premise • Cumple normativas chilenas
+        </div>
+    </section>
+
+</body>
+</html>
