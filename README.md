@@ -1,7 +1,8 @@
-# IntegralFlex Suites - Futuristic Edition v2
+# IntegralFlex Suites - Futuristic Edition v3
 
-Ajustes aplicados según feedback:
-- cabecera blanca para uniformar con el logo
-- menús con más efectos hover
-- CTA final corregido con mejor balance visual
-- misma estructura comercial + portal separado + dashboard base
+Mejora aplicada en la grilla de módulos:
+- tarjetas más comerciales tipo SaaS
+- íconos SVG reales
+- jerarquía visual más limpia
+- botones de ingreso estilo cápsula
+- punto de estado activo
