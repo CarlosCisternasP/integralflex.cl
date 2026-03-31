@@ -1,18 +1,17 @@
-# IntegralFlex Suites v2
+# IntegralFlex Suites - Pixel Perfect
 
-Sitio comercial principal con enlaces a los módulos reales:
+Proyecto comercial generado a partir de la referencia visual aprobada.
 
+## Incluye
+- landing principal con layout muy cercano al mockup
+- branding superior integrado
+- hero comercial con módulos reales enlazados
+- previews visuales del login y dashboard
+- portal de login separado
+- dashboard base
+
+## Módulos enlazados
 - ServiceDesk → https://www.servicesdesk.cl/
-- CertiDesk → https://www.certidesk.cl/
-- CentralDesk → http://portaldocumental.hidronor.cl/
 - LogisDesk → http://4.186.27.1:5005/
-
-## Estructura
-- `/index.html` → landing comercial
-- `/login/index.html` → portal separado
-- `/dashboard/index.html` → vista base
-- `/assets/css/styles.css` → estilos
-- `/assets/js/main.js` → animaciones de aparición
-
-## Deploy en Netlify
-Publica la raíz del proyecto.
+- CentralDesk → http://portaldocumental.hidronor.cl/
+- CertiDesk → https://www.certidesk.cl/

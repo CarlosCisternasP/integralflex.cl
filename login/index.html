@@ -4,42 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IntegralFlex Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <style>
     body{background:linear-gradient(135deg,#071733,#0d2b5b);min-height:100vh;display:grid;place-items:center}
     .login-wrap{width:min(460px,92%)}
     .login-card{background:#fff;border-radius:26px;padding:32px;box-shadow:0 24px 50px rgba(0,0,0,.25)}
-    .login-card h1{margin:0 0 8px;color:#10213e}
-    .login-card p{color:#60728d}
+    .login-logo{height:82px;margin:0 auto 10px}
+    .login-card h1{margin:0 0 8px;color:#10213e;text-align:center}
+    .login-card p{color:#60728d;text-align:center}
     .field{margin:14px 0}
     .field label{display:block;margin-bottom:8px;color:#10213e;font-weight:700}
-    .field input{width:100%;padding:14px 16px;border:1px solid #d7e5ff;border-radius:14px;font-size:1rem}
-    .helper{font-size:.92rem;color:#64748b;margin-top:14px}
+    .field input{width:100%;padding:14px 16px;border:1px solid #d7e5ff;border-radius:14px;font-size:1rem;font-family:inherit}
+    .helper{font-size:.92rem;color:#64748b;margin-top:14px;text-align:center}
     .back-link{display:inline-block;margin-top:16px;color:#2563eb;text-decoration:none;font-weight:700}
+    .back-wrap{text-align:center}
   </style>
 </head>
 <body>
   <div class="login-wrap">
     <div class="login-card">
-      <div class="mini-brand" style="color:#10213e;margin-bottom:18px">
-        <div class="brand-mark">IF</div>
-        <div><strong>IntegralFlex</strong><span style="color:#5a6d86">SUITES</span></div>
-      </div>
+      <img src="../assets/img/logo-integralflex.png" alt="IntegralFlex Suites" class="login-logo" />
       <h1>Acceso a la plataforma</h1>
-      <p>Portal separado del sitio comercial. Aquí puedes continuar después con la autenticación real.</p>
+      <p>Portal separado del sitio comercial. Aquí puedes conectar la autenticación real cuando lo decidas.</p>
       <form>
         <div class="field">
-          <label>RUT</label>
+          <label>Correo electrónico o RUT</label>
           <input type="text" placeholder="13991430-9" />
         </div>
         <div class="field">
           <label>Contraseña</label>
           <input type="password" placeholder="••••••••••" />
         </div>
-        <button class="btn btn-primary full" type="button">Ingresar</button>
+        <a class="btn btn-primary" href="../dashboard/" style="width:100%">Ingresar a IntegralFlex</a>
       </form>
       <p class="helper">La landing comercial no valida credenciales.</p>
-      <a class="back-link" href="../index.html">← Volver al sitio</a>
+      <div class="back-wrap"><a class="back-link" href="../index.html">← Volver al sitio</a></div>
     </div>
   </div>
 </body>

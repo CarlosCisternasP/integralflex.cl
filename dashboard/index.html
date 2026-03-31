@@ -4,16 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IntegralFlex Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <style>
     body{background:#eef5ff;margin:0}
-    .frame{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .frame{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
     .side{background:linear-gradient(180deg,#0b2c6b,#08214c);padding:24px;color:#fff}
-    .side nav a{display:block;color:#d6e6ff;text-decoration:none;margin:10px 0;padding:12px 14px;border-radius:12px}
+    .side img{height:64px;margin-bottom:18px}
+    .side nav a{display:block;color:#d6e6ff;text-decoration:none;margin:10px 0;padding:12px 14px;border-radius:12px;font-weight:700}
     .side nav a.active{background:rgba(255,255,255,.12)}
     .main{padding:24px}
     .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .cards .metric{min-height:120px}
+    .metric{padding:18px;border-radius:18px;color:#fff;font-weight:800}
+    .metric strong{display:block;font-size:2rem}
+    .blue{background:linear-gradient(135deg,#1d6cf0,#2563eb)}
+    .green{background:linear-gradient(135deg,#17944f,#22c55e)}
+    .orange{background:linear-gradient(135deg,#ef6c00,#fb923c)}
+    .teal{background:linear-gradient(135deg,#0f8b6d,#10b981)}
     @media(max-width:900px){.frame{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.cards{grid-template-columns:1fr}}
   </style>
@@ -21,10 +30,7 @@
 <body>
   <div class="frame">
     <aside class="side">
-      <div class="mini-brand">
-        <div class="brand-mark">IF</div>
-        <div><strong>IntegralFlex</strong><span>PLATFORM</span></div>
-      </div>
+      <img src="../assets/img/logo-integralflex.png" alt="IntegralFlex" />
       <nav>
         <a class="active" href="#">Dashboard</a>
         <a href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer">ServiceDesk</a>
@@ -35,7 +41,7 @@
     </aside>
     <main class="main">
       <h1>Dashboard IntegralFlex</h1>
-      <p class="muted">Vista base para continuar el desarrollo interno y enlazar los módulos reales.</p>
+      <p style="color:#687b95">Vista base para continuar el desarrollo interno y enlazar los módulos reales.</p>
       <div class="cards">
         <div class="metric blue"><strong>243</strong><span>Tickets activos</span></div>
         <div class="metric green"><strong>128</strong><span>Vehículos en ruta</span></div>
