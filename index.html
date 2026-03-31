@@ -1,71 +1,378 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IntegralFlex Suites</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntegralFlex Suites | Plataforma Empresarial Modular</title>
+  <meta name="description" content="IntegralFlex Suites: integración empresarial modular y escalable para soporte, logística, documentación y certificados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
 
-<header class="header">
-  <div class="logo">IntegralFlex Suites</div>
-  <div class="cta">Solicitar Demo</div>
-</header>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <img src="assets/img/logo-integralflex.png" alt="IntegralFlex Suites" class="brand-logo" />
+      </a>
 
-<section class="hero">
-  <div class="panel">
-    <div class="core">IntegralFlex Core</div>
+      <button class="mobile-toggle" aria-label="Abrir menú">☰</button>
 
-    <div class="node blue">ServiceDesk</div>
-    <div class="node green">LogisDesk</div>
-    <div class="node orange">CentralDesk</div>
-    <div class="node teal">CertiDesk</div>
+      <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
 
-    <div class="lines"></div>
-  </div>
-</section>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="/login/">Portal</a>
+        <a class="btn btn-accent" href="#contacto">Solicitar demo</a>
+      </div>
+    </div>
+  </header>
 
-<section class="sales">
-<h2>Control total de la operación empresarial en una sola plataforma</h2>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">INTEGRACIÓN EMPRESARIAL MODULAR Y ESCALABLE</div>
+          <h1>La suite que conecta soporte, logística, documentación y certificados en una sola visión.</h1>
+          <p>
+            IntegralFlex Suites unifica tus plataformas actuales en una experiencia robusta, moderna y lista para crecer.
+            Presenta ServiceDesk, LogisDesk, CentralDesk y CertiDesk como un ecosistema tecnológico coherente,
+            comercializable y preparado para una evolución SaaS real.
+          </p>
 
-<div class="grid">
-<div class="card">
-<h3>LogisDesk: Operación Completa</h3>
-<p>Desde la solicitud hasta la salida final: QR, trazabilidad, pesaje, planta, rutas y cálculo de costos en tiempo real.</p>
-</div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/login/">Acceder a la plataforma</a>
+            <a class="btn btn-secondary" href="#modulos">Explorar módulos</a>
+          </div>
 
-<div class="card">
-<h3>CertiDesk: Cumplimiento</h3>
-<p>Gestión de certificados, cumplimiento legal y control ambiental totalmente integrado.</p>
-</div>
+          <div class="hero-mini-stats">
+            <div>
+              <strong>4</strong>
+              <span>Suites activas</span>
+            </div>
+            <div>
+              <strong>API</strong>
+              <span>Preparada para integrar</span>
+            </div>
+            <div>
+              <strong>Cloud</strong>
+              <span>+ On-Premise</span>
+            </div>
+          </div>
+        </div>
 
-<div class="card">
-<h3>CentralDesk: Documentos</h3>
-<p>Flujos de aprobación, control documental y trazabilidad de información crítica.</p>
-</div>
-</div>
-</section>
+        <div class="hero-panel reveal">
+          <div class="window-card">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <div class="hero-brand-mini">
+              <img src="assets/img/logo-integralflex.png" alt="IntegralFlex Suites" />
+            </div>
+            <div class="module-matrix">
+              <a class="matrix-card matrix-blue" href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer">
+                <div class="matrix-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12a8 8 0 0 1 16 0" />
+                    <path d="M4 12v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2Z" />
+                    <path d="M20 12v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z" />
+                    <path d="M9 19h6" />
+                  </svg>
+                </div>
+                <strong>ServiceDesk</strong>
+                <span>Soporte y Mesa de Ayuda</span>
+              </a>
 
-<section class="pricing">
-<h2>Modelo SaaS por módulos</h2>
-<div class="grid">
-<div class="price">
-<h3>Starter</h3>
-<p>1 módulo</p>
-</div>
-<div class="price">
-<h3>Business</h3>
-<p>2-3 módulos</p>
-</div>
-<div class="price">
-<h3>Enterprise</h3>
-<p>Suite completa</p>
-</div>
-</div>
-</section>
+              <a class="matrix-card matrix-green" href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer">
+                <div class="matrix-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 6.75A1.75 1.75 0 0 1 4.75 5h4.1c.57 0 1.1.28 1.42.75l.48.7c.18.27.49.43.82.43h7.73A1.75 1.75 0 0 1 21 8.63V17.25A1.75 1.75 0 0 1 19.25 19H4.75A1.75 1.75 0 0 1 3 17.25V6.75Z"/>
+                  </svg>
+                </div>
+                <strong>CentralDesk</strong>
+                <span>Documentación Centralizada</span>
+              </a>
 
+              <a class="matrix-card matrix-purple" href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer">
+                <div class="matrix-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+                    <path d="M7 8h10"></path>
+                    <path d="M7 12h6"></path>
+                    <path d="M15.5 18.5 14 22l-1.5-1-1.5 1-1.5-3.5"></path>
+                  </svg>
+                </div>
+                <strong>CertiDesk</strong>
+                <span>Gestión de Certificados</span>
+              </a>
+
+              <a class="matrix-card matrix-cyan" href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer">
+                <div class="matrix-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1.5" y="6" width="11" height="9" rx="1.5"></rect>
+                    <path d="M12.5 9h4l3 3v3h-7z"></path>
+                    <circle cx="6" cy="18" r="2"></circle>
+                    <circle cx="17" cy="18" r="2"></circle>
+                  </svg>
+                </div>
+                <strong>LogisDesk</strong>
+                <span>Logística y Transporte</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modules" id="modulos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">SUITES REALES</span>
+          <h2>Tus plataformas, ahora bajo una identidad tecnológica potente</h2>
+          <p>Diseñadas como productos autónomos, presentadas como una misma arquitectura de valor.</p>
+        </div>
+
+        <div class="module-grid modern-cards">
+          <article class="product-card reveal service">
+            <div class="product-top product-blue">
+              <div class="product-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 12a8 8 0 0 1 16 0" />
+                  <path d="M4 12v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2Z" />
+                  <path d="M20 12v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z" />
+                  <path d="M9 19h6" />
+                </svg>
+              </div>
+              <span class="online-dot"></span>
+              <h3>ServiceDesk</h3>
+              <p>Mesa de ayuda y soporte</p>
+            </div>
+            <div class="product-body">
+              <div class="product-tags">Tickets • SLA • Base Conocimiento</div>
+              <a href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer" class="enter-btn enter-blue">Ingresar <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal logis">
+            <div class="product-top product-green-deep">
+              <div class="product-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1.5" y="6" width="11" height="9" rx="1.5"></rect>
+                  <path d="M12.5 9h4l3 3v3h-7z"></path>
+                  <circle cx="6" cy="18" r="2"></circle>
+                  <circle cx="17" cy="18" r="2"></circle>
+                </svg>
+              </div>
+              <span class="online-dot"></span>
+              <h3>LogisDesk</h3>
+              <p>Logística y Transporte</p>
+            </div>
+            <div class="product-body">
+              <div class="product-tags">Flotas • Rutas • GPS</div>
+              <a href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer" class="enter-btn enter-green">Ingresar <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal central">
+            <div class="product-top product-orange">
+              <div class="product-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 6.75A1.75 1.75 0 0 1 4.75 5h4.1c.57 0 1.1.28 1.42.75l.48.7c.18.27.49.43.82.43h7.73A1.75 1.75 0 0 1 21 8.63V17.25A1.75 1.75 0 0 1 19.25 19H4.75A1.75 1.75 0 0 1 3 17.25V6.75Z"/>
+                </svg>
+              </div>
+              <span class="online-dot"></span>
+              <h3>CentralDesk</h3>
+              <p>Documentación Centralizada</p>
+            </div>
+            <div class="product-body">
+              <div class="product-tags">Archivos • Workflows • Firma Digital</div>
+              <a href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer" class="enter-btn enter-orange">Ingresar <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="product-card reveal certi">
+            <div class="product-top product-teal">
+              <div class="product-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+                  <path d="M7 8h10"></path>
+                  <path d="M7 12h6"></path>
+                  <path d="M15.5 18.5 14 22l-1.5-1-1.5 1-1.5-3.5"></path>
+                </svg>
+              </div>
+              <span class="online-dot"></span>
+              <h3>CertiDesk</h3>
+              <p>Gestión de Certificados</p>
+            </div>
+            <div class="product-body">
+              <div class="product-tags">ISO • Vigencias • Alertas</div>
+              <a href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer" class="enter-btn enter-green-soft">Ingresar <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="architecture" id="arquitectura">
+      <div class="container architecture-layout">
+        <div class="arch-copy reveal">
+          <span class="section-pill">ARQUITECTURA</span>
+          <h2>IntegralFlex Platform como núcleo de integración</h2>
+          <p>
+            La propuesta no es solo visual: está pensada como una plataforma madre que organiza
+            el acceso, el branding, la comercialización y la futura integración técnica de todos tus sistemas.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <strong>Portal unificado</strong>
+              <span>Sitio comercial + portal interno desacoplado</span>
+            </div>
+            <div class="feature-item">
+              <strong>Escalabilidad modular</strong>
+              <span>Activa nuevas suites sin rediseñar la marca</span>
+            </div>
+            <div class="feature-item">
+              <strong>Ruta SaaS</strong>
+              <span>Preparado para login central, dashboards y APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-visual reveal">
+          <div class="stack-card">
+            <div class="stack-layer top">Experience Layer<br><small>Landing · Portal · Dashboard</small></div>
+            <div class="stack-layer mid">Business Modules<br><small>ServiceDesk · LogisDesk · CentralDesk · CertiDesk</small></div>
+            <div class="stack-layer low">Integration Core<br><small>Usuarios · Roles · APIs · Reportes</small></div>
+            <div class="stack-layer base">Infrastructure Layer<br><small>Flask · PostgreSQL · Debian · Netlify</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="beneficios">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">BENEFICIOS</span>
+          <h2>Diseño robusto para una propuesta comercial seria</h2>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <h3>Marca paraguas real</h3>
+            <p>IntegralFlex deja de ser solo un nombre y pasa a ser una identidad coherente para vender tus soluciones como suite.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3>Mayor percepción de valor</h3>
+            <p>Un diseño premium y futurista eleva automáticamente la percepción comercial de tus plataformas actuales.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3>Base para evolución técnica</h3>
+            <p>Desde aquí puedes crecer a SSO, dashboards vivos, métricas por empresa y administración multi-tenant.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap" id="roadmap">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">ROADMAP</span>
+          <h2>Cómo convertir esto en una plataforma completa</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-step">01</div>
+            <div>
+              <strong>Sitio comercial</strong>
+              <p>Posicionar IntegralFlex como suite empresarial con módulos reales enlazados.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-step">02</div>
+            <div>
+              <strong>Portal interno</strong>
+              <p>Separar login, sesiones y dashboard del sitio público.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-step">03</div>
+            <div>
+              <strong>Integración central</strong>
+              <p>Unificar usuarios, permisos, reportes y navegación entre módulos.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-step">04</div>
+            <div>
+              <strong>SSO + analítica</strong>
+              <p>Login único, trazabilidad de uso, métricas y administración multiempresa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="container cta-box reveal">
+        <div class="cta-copy">
+          <span class="section-pill">SIGUIENTE PASO</span>
+          <h2>IntegralFlex ya puede verse como una plataforma de clase mundial.</h2>
+          <p>Ahora el siguiente salto es conectar este diseño con tus módulos reales y preparar un acceso corporativo centralizado.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-accent" href="/login/">Ir al portal</a>
+          <a class="btn btn-secondary-dark" href="mailto:contacto@integralflex.cl">Contactar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div class="footer-brand">
+        <img src="assets/img/logo-integralflex.png" alt="IntegralFlex Suites" class="footer-logo" />
+        <p>Integración empresarial modular y escalable para soporte, logística, documentación y certificados.</p>
+      </div>
+      <div>
+        <h4>Suites</h4>
+        <a href="https://www.servicesdesk.cl/" target="_blank" rel="noopener noreferrer">ServiceDesk</a>
+        <a href="http://4.186.27.1:5005/" target="_blank" rel="noopener noreferrer">LogisDesk</a>
+        <a href="http://portaldocumental.hidronor.cl/" target="_blank" rel="noopener noreferrer">CentralDesk</a>
+        <a href="https://www.certidesk.cl/" target="_blank" rel="noopener noreferrer">CertiDesk</a>
+      </div>
+      <div>
+        <h4>Plataforma</h4>
+        <a href="/login/">Portal</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+      <div>
+        <h4>Estado</h4>
+        <a href="#">Cloud + On-Premise</a>
+        <a href="#">Chile</a>
+        <a href="#">Soporte 24/7</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>IntegralFlex Suites © 2026</span>
+      <span>Diseño futurista robusto v4</span>
+      <span>Creado para evolución empresarial</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
