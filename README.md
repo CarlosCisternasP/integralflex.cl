@@ -1,8 +1,6 @@
-# IntegralFlex Suites - Futuristic Edition v3
+# IntegralFlex Suites - Futuristic Edition v4
 
-Mejora aplicada en la grilla de módulos:
-- tarjetas más comerciales tipo SaaS
-- íconos SVG reales
-- jerarquía visual más limpia
-- botones de ingreso estilo cápsula
-- punto de estado activo
+Cambios aplicados:
+- bloque superior reemplazado por diseño tipo panel 2x2 como la referencia enviada
+- cards inferiores ajustadas con altura visual uniforme
+- botones y jerarquía visual refinados
