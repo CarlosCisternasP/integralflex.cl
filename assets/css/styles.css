@@ -1,48 +1,42 @@
+
 body{margin:0;font-family:Inter;background:#061a33;color:white}
-.header{background:white;color:#0b1e3a;padding:20px;font-weight:800}
 
-.hero{padding:60px;display:flex;justify-content:center}
+.header{display:flex;justify-content:space-between;background:white;color:#0b1e3a;padding:20px;font-weight:800}
+
+.hero{padding:80px;display:flex;justify-content:center}
+
 .panel{
-  padding:30px;
-  border-radius:30px;
-  background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.02));
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.2);
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
+  position:relative;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle,#0b2c6b,#041124);
+  display:flex;align-items:center;justify-content:center;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.core{
+  position:absolute;
+  width:150px;height:150px;
+  border-radius:50%;
+  background:#0b2c6b;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;
 }
 
-.card{
-  padding:30px;
+.node{
+  position:absolute;
+  padding:15px 20px;
   border-radius:20px;
   font-weight:800;
-  text-align:center;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
-  position:relative;
-  overflow:hidden;
 }
 
-.card::after{
-  content:"";
-  position:absolute;
-  top:-50%;
-  left:-50%;
-  width:200%;
-  height:200%;
-  background:linear-gradient(45deg,transparent,rgba(255,255,255,.2),transparent);
-  transform:rotate(25deg);
-}
+.blue{top:10%;left:20%;background:#2d74ff}
+.green{top:10%;right:20%;background:#28c76f}
+.orange{bottom:10%;left:20%;background:#ff8d21}
+.teal{bottom:10%;right:20%;background:#00cfe8}
 
-.blue{background:linear-gradient(135deg,#2d74ff,#1e4fd1)}
-.green{background:linear-gradient(135deg,#28c76f,#1e9e55)}
-.purple{background:linear-gradient(135deg,#8e5cff,#6a3ed9)}
-.cyan{background:linear-gradient(135deg,#00cfe8,#0097a7)}
+.sales{padding:60px}
+.grid{display:flex;gap:20px}
+.card{background:rgba(255,255,255,.05);padding:20px;border-radius:20px}
 
-.benefits{padding:60px}
-.cards{display:flex;gap:20px}
-.bcard{background:rgba(255,255,255,.05);padding:20px;border-radius:20px}
+.pricing{padding:60px}
+.price{background:rgba(255,255,255,.08);padding:20px;border-radius:20px;text-align:center}
