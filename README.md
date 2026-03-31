@@ -1,6 +1,3 @@
-# IntegralFlex Suites - Futuristic Edition v4
+# IntegralFlex V7 Demo Comercial
 
-Cambios aplicados:
-- bloque superior reemplazado por diseño tipo panel 2x2 como la referencia enviada
-- cards inferiores ajustadas con altura visual uniforme
-- botones y jerarquía visual refinados
+Versión enfocada en storytelling comercial, demo visual y venta por módulos.
