@@ -143,6 +143,7 @@ img {
   border-radius: 14px;
   transition: 0.25s ease;
   overflow: hidden;
+  white-space: nowrap;  /* evita saltos raros */
 }
 
 .main-nav a::before {
