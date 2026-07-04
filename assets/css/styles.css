@@ -108,7 +108,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
 }
 
 .brand {
@@ -626,6 +626,176 @@ img {
 .enter-green-soft {
   background: #e2f5ea;
   color: #0e8d64;
+}
+
+.enter-purple {
+  background: #ece4ff;
+  color: #6d44e6;
+}
+
+.enter-cyan {
+  background: #dcf6fb;
+  color: #0d8ca0;
+}
+
+.enter-amber {
+  background: #fdf0d7;
+  color: #b97a0a;
+}
+
+.enter-rose {
+  background: #ffe4ec;
+  color: #d6336c;
+}
+
+.product-purple {
+  background: linear-gradient(135deg, #8758ff, #6d44e6);
+}
+
+.product-cyan {
+  background: linear-gradient(135deg, #15b7d9, #0d9cae);
+}
+
+.product-amber {
+  background: linear-gradient(135deg, #f5a623, #d97b06);
+}
+
+.product-rose {
+  background: linear-gradient(135deg, #f75590, #d6336c);
+}
+
+.new-badge {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  z-index: 1;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.price-amount {
+  margin: 14px 0 6px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #10213e;
+  line-height: 1;
+}
+
+.price-amount span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #536984;
+}
+
+.price-cta {
+  margin-top: 16px;
+  align-self: flex-start;
+}
+
+.contact-form-wrap {
+  margin-top: 26px;
+}
+
+.contact-form {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.form-sub {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  padding: 13px 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(10, 23, 46, 0.55);
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+}
+
+.form-grid select option {
+  color: #10213e;
+  background: #fff;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  outline: 2px solid rgba(45, 116, 255, 0.55);
+  border-color: transparent;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  opacity: 0;
+}
+
+.form-submit {
+  margin-top: 20px;
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 12px;
+  font-weight: 700;
+  min-height: 22px;
+}
+
+.form-status.ok {
+  color: #2be37d;
+}
+
+.form-status.err {
+  color: #ff8d8d;
+}
+
+@media (max-width: 720px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .story-layout {

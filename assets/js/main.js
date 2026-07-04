@@ -24,6 +24,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const form = document.getElementById('contactForm');
+  if (form) {
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      const data = Object.fromEntries(new FormData(form).entries());
+      btn.disabled = true;
+      status.textContent = 'Enviando...';
+      status.className = 'form-status';
+      try {
+        const res = await fetch('/.netlify/functions/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const out = await res.json().catch(() => ({}));
+        if (res.ok) {
+          status.textContent = '✓ Mensaje enviado. Te contactaremos pronto.';
+          status.classList.add('ok');
+          form.reset();
+        } else {
+          status.textContent = out.error || 'No se pudo enviar. Intenta nuevamente o escríbenos a contacto@integralflex.cl';
+          status.classList.add('err');
+        }
+      } catch {
+        status.textContent = 'Error de conexión. Escríbenos a contacto@integralflex.cl';
+        status.classList.add('err');
+      }
+      btn.disabled = false;
+    });
+  }
+
   const canvas = document.getElementById('networkCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
