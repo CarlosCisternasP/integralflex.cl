@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Archivo de comprobación de propiedad del dominio para Microsoft 365: colocar en la raíz del sitio web",
+  "Domain": "integralflex.cl",
+  "Id": "6125c7cd-365c-439c-b636-46b10f27ecbf"
+}
