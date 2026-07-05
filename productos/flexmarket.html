@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FlexMarket | IntegralFlex Suites</title>
-  <meta name="description" content="Supermercados y minimarkets. Plataforma completa para supermercados y minimarkets: caja POS, inventario, ecommerce y administración central con API m" />
+  <meta name="description" content="Supermercados y minimarkets. Sistema completo para supermercados y minimarkets: caja POS con código de barras, inventario central, ecommerce integrad" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,22 +36,35 @@
     <section class="phero">
       <div class="container phero-layout">
         <div class="phero-copy reveal">
-          <div class="phero-badge product-rose">🛒 FlexMarket</div>
+          <div class="phero-badge product-rose"><span class="phero-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span> FlexMarket</div>
           <h1>Supermercados y minimarkets</h1>
-          <p>Plataforma completa para supermercados y minimarkets: caja POS, inventario, ecommerce y administración central con API moderna.</p>
+          <p>Sistema completo para supermercados y minimarkets: caja POS con código de barras, inventario central, ecommerce integrado y administración con reportes, sobre una API moderna y despliegue Docker.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="../index.html#contacto">Solicitar prueba gratis</a>
-            
+            <a class="btn btn-secondary" href="https://portal.certidesk.cl/flexmarket/" target="_blank" rel="noopener noreferrer">Abrir aplicación</a>
           </div>
-          <div class="phero-stack">FastAPI · PostgreSQL · React · Docker · Nginx</div>
+          <a class="phero-url" href="https://portal.certidesk.cl/flexmarket/" target="_blank" rel="noopener noreferrer">portal.certidesk.cl/flexmarket</a>
         </div>
         <div class="phero-panel reveal">
           <div class="window-card">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <div class="phero-big product-rose">🛒</div>
+            <div class="phero-big product-rose"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
             <h3 class="phero-panel-title">FlexMarket</h3>
             <p class="phero-panel-sub">Parte de IntegralFlex Suites</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">VISIÓN GENERAL</span>
+          <h2>Qué es FlexMarket</h2>
+        </div>
+        <div class="overview-text reveal">
+          <p>FlexMarket lleva la operación de un supermercado o minimarket a una sola plataforma: la caja POS atiende con lector de código de barras, el panel central administra productos, inventario, usuarios y reportes, y la tienda online abre el canal digital con el mismo catálogo. La comunicación en tiempo real mantiene sincronizadas las cajas con la administración.</p>
+          <p>Construido API-first con FastAPI y frontend React, el sistema queda documentado con Swagger y listo para integrarse con el resto de la suite IntegralFlex. El despliegue con Docker Compose incluye migraciones y datos semilla, y su arquitectura permite crecer desde un local único a múltiples puntos de venta.</p>
         </div>
       </div>
     </section>
@@ -64,37 +77,65 @@
         </div>
         <div class="feature-grid">
           <article class="benefit-card reveal feature-card">
-            <h3>💳 Caja POS</h3>
-            <p>Venta rápida con lector de código de barras.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3>Caja POS</h3>
+            <p>Venta rápida en caja con lector de código de barras y flujo optimizado para alto volumen.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>📦 Inventario central</h3>
-            <p>Stock, productos, categorías y alertas de reposición.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+            <h3>Inventario central</h3>
+            <p>Stock, productos y categorías administrados desde un panel único con alertas de reposición.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🛍️ Tienda online</h3>
-            <p>Canal ecommerce integrado para tus clientes.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Ecommerce integrado</h3>
+            <p>Tienda online con el mismo catálogo y stock que las cajas físicas.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>📊 Dashboard admin</h3>
-            <p>Ventas, márgenes y reportes en un panel central.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+            <h3>Sincronización en tiempo real</h3>
+            <p>Canal websocket que mantiene cajas y administración al día al instante.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>👥 Usuarios y roles</h3>
-            <p>Cajeros, supervisores y administradores.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <h3>Dashboard y reportes</h3>
+            <p>Ventas, márgenes y movimiento de inventario en un panel central.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🔌 API-first</h3>
-            <p>Backend FastAPI con documentación Swagger completa.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Usuarios y roles</h3>
+            <p>Cajeros, supervisores y administradores con permisos diferenciados.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🐳 Docker + Nginx</h3>
-            <p>Despliegue estable y escalable en tu servidor.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+            <h3>API-first</h3>
+            <p>Backend FastAPI documentado con Swagger para integraciones.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🧾 Datos iniciales</h3>
-            <p>Migraciones y seed automáticos para partir rápido.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+            <h3>Docker + Nginx</h3>
+            <p>Despliegue estable, reproducible y escalable en tu servidor.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">MÓDULOS</span>
+          <h2>Módulos y pantallas</h2>
+        </div>
+        <div class="chip-list reveal">
+          <span class="chip">POS / Caja</span>
+          <span class="chip">Dashboard admin</span>
+          <span class="chip">Productos</span>
+          <span class="chip">Inventario</span>
+          <span class="chip">Tienda online</span>
+          <span class="chip">Reportes</span>
+          <span class="chip">Usuarios y roles</span>
+          <span class="chip">API Swagger</span>
+          <span class="chip">Sincronización websocket</span>
         </div>
       </div>
     </section>
@@ -110,29 +151,56 @@
             <div class="timeline-step">01</div>
             <div>
               <strong>Instala</strong>
-              <p>Despliegue automatizado con Docker en tu servidor.</p>
+              <p>Despliegue automatizado con Docker Compose.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">02</div>
             <div>
               <strong>Configura</strong>
-              <p>Productos, precios, usuarios y caja.</p>
+              <p>Productos, precios, cajas y usuarios.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">03</div>
             <div>
               <strong>Opera</strong>
-              <p>POS en tienda y ventas online en paralelo.</p>
+              <p>POS en tienda y ventas online en paralelo, sincronizados.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">04</div>
             <div>
               <strong>Controla</strong>
-              <p>Dashboard con ventas y stock al día.</p>
+              <p>Dashboard central con ventas y stock al día.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">FICHA TÉCNICA</span>
+          <h2>Especificaciones</h2>
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item reveal">
+            <h4>Aplicación</h4>
+            <p>FastAPI + PostgreSQL, frontend React, websockets</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Interfaces</h4>
+            <p>POS, panel admin, tienda online, API Swagger</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Despliegue</h4>
+            <p>Docker Compose + Nginx en portal.certidesk.cl/flexmarket</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Seguridad</h4>
+            <p>Usuarios con roles y credenciales administradas</p>
           </div>
         </div>
       </div>

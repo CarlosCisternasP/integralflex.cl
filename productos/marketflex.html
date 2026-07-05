@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MarketFlex | IntegralFlex Suites</title>
-  <meta name="description" content="Radar de ofertas + tienda online. Dos piezas que trabajan juntas: un radar que detecta caídas de precio reales en Mercado Libre Chile con la API oficial, " />
+  <meta name="description" content="Radar de ofertas + tienda online. Radar que detecta caídas de precio reales en Mercado Libre Chile con la API oficial y filtra descuentos inflados, más un" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,22 +36,35 @@
     <section class="phero">
       <div class="container phero-layout">
         <div class="phero-copy reveal">
-          <div class="phero-badge product-orange">📡 MarketFlex</div>
+          <div class="phero-badge product-orange"><span class="phero-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg></span> MarketFlex</div>
           <h1>Radar de ofertas + tienda online</h1>
-          <p>Dos piezas que trabajan juntas: un radar que detecta caídas de precio reales en Mercado Libre Chile con la API oficial, y una tienda online lista para publicar esas ofertas.</p>
+          <p>Radar que detecta caídas de precio reales en Mercado Libre Chile con la API oficial y filtra descuentos inflados, más una tienda online lista para publicar esas ofertas con pagos Mercado Pago.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="../index.html#contacto">Solicitar prueba gratis</a>
-            
+            <a class="btn btn-secondary" href="https://www.marketflex.cl" target="_blank" rel="noopener noreferrer">Abrir aplicación</a>
           </div>
-          <div class="phero-stack">Python · API Mercado Libre · HTML5 · Mercado Pago</div>
+          <a class="phero-url" href="https://www.marketflex.cl" target="_blank" rel="noopener noreferrer">www.marketflex.cl</a>
         </div>
         <div class="phero-panel reveal">
           <div class="window-card">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <div class="phero-big product-orange">📡</div>
+            <div class="phero-big product-orange"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg></div>
             <h3 class="phero-panel-title">MarketFlex</h3>
             <p class="phero-panel-sub">Parte de IntegralFlex Suites</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">VISIÓN GENERAL</span>
+          <h2>Qué es MarketFlex</h2>
+        </div>
+        <div class="overview-text reveal">
+          <p>MarketFlex son dos piezas que trabajan juntas. El Radar de Ofertas recorre Mercado Libre Chile usando la API oficial, busca productos top y detecta caídas de precio reales, descartando los descuentos inflados que abundan en el retail. El resultado se exporta como catálogo JSON listo para publicar.</p>
+          <p>La tienda online publica esas ofertas con buscador, filtros por categoría y ordenamiento por descuento o precio. Cada producto puede vender con link de pago de Mercado Pago o derivar la consulta a WhatsApp. El radar puede programarse para ejecutarse automáticamente cada 4 horas, manteniendo la vitrina siempre fresca.</p>
         </div>
       </div>
     </section>
@@ -64,29 +77,53 @@
         </div>
         <div class="feature-grid">
           <article class="benefit-card reveal feature-card">
-            <h3>📡 Radar de ofertas</h3>
-            <p>Busca productos top y caídas de precio reales usando la API oficial de Mercado Libre Chile.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg></div>
+            <h3>Radar de ofertas</h3>
+            <p>Recorre Mercado Libre Chile con la API oficial buscando productos top y caídas de precio reales.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🔍 Filtro anti-humo</h3>
-            <p>Descarta descuentos inflados: solo ofertas verificadas.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
+            <h3>Filtro anti-descuento inflado</h3>
+            <p>Analiza el historial para descartar ofertas falsas: solo publica descuentos verificados.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🛍️ Tienda lista</h3>
-            <p>Tienda online moderna con buscador, filtros por categoría y orden por descuento.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Tienda lista para vender</h3>
+            <p>Vitrina moderna con buscador, filtros por categoría y orden por descuento o precio.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>💳 Links de pago</h3>
-            <p>Botón de compra con Mercado Pago o consulta por WhatsApp.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3>Pagos Mercado Pago</h3>
+            <p>Botón de compra con tu link de Mercado Pago, o consulta directa por WhatsApp.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>⏱️ Radar programado</h3>
-            <p>Ejecución automática cada 4 horas.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3>Ejecución programada</h3>
+            <p>Radar automático cada 4 horas para mantener las ofertas vigentes.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🔄 Import/Export</h3>
-            <p>Catálogo portable en JSON: respalda, migra y publica con un clic.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+            <h3>Catálogo portable</h3>
+            <p>Exporta e importa el catálogo completo en JSON: respalda, migra y publica con un clic.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">MÓDULOS</span>
+          <h2>Módulos y pantallas</h2>
+        </div>
+        <div class="chip-list reveal">
+          <span class="chip">Radar de ofertas</span>
+          <span class="chip">Tienda online</span>
+          <span class="chip">Panel de productos</span>
+          <span class="chip">Categorías y filtros</span>
+          <span class="chip">Links de pago</span>
+          <span class="chip">WhatsApp</span>
+          <span class="chip">Import / Export JSON</span>
         </div>
       </div>
     </section>
@@ -102,7 +139,7 @@
             <div class="timeline-step">01</div>
             <div>
               <strong>Escanea</strong>
-              <p>El radar recorre Mercado Libre Chile.</p>
+              <p>El radar recorre Mercado Libre Chile con la API oficial.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
@@ -116,15 +153,42 @@
             <div class="timeline-step">03</div>
             <div>
               <strong>Publica</strong>
-              <p>Importa el JSON a la tienda con un clic.</p>
+              <p>Importa el catálogo JSON a la tienda con un clic.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">04</div>
             <div>
               <strong>Vende</strong>
-              <p>Con Mercado Pago o WhatsApp.</p>
+              <p>Con Mercado Pago o consultas por WhatsApp.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">FICHA TÉCNICA</span>
+          <h2>Especificaciones</h2>
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item reveal">
+            <h4>Radar</h4>
+            <p>Python + API oficial de Mercado Libre Chile</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Tienda</h4>
+            <p>HTML5 + JavaScript, sin dependencias de servidor</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Pagos</h4>
+            <p>Links de Mercado Pago y contacto WhatsApp</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Despliegue</h4>
+            <p>Sitio estático en www.marketflex.cl con radar programado</p>
           </div>
         </div>
       </div>

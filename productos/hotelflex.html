@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PMS-HotelFlex | IntegralFlex Suites</title>
-  <meta name="description" content="Sistema de gestión hotelera (PMS). PMS moderno y API-first: rack de disponibilidad, reservas, check-in/check-out, folios con cargos y pagos, auditoría noct" />
+  <meta name="description" content="Sistema de gestión hotelera (PMS). PMS moderno y API-first para hoteles: rack de disponibilidad, reservas, check-in/check-out, folios con cargos y pagos We" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,22 +36,35 @@
     <section class="phero">
       <div class="container phero-layout">
         <div class="phero-copy reveal">
-          <div class="phero-badge product-blue">🏨 PMS-HotelFlex</div>
+          <div class="phero-badge product-blue"><span class="phero-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> PMS-HotelFlex</div>
           <h1>Sistema de gestión hotelera (PMS)</h1>
-          <p>PMS moderno y API-first: rack de disponibilidad, reservas, check-in/check-out, folios con cargos y pagos, auditoría nocturna y housekeeping móvil.</p>
+          <p>PMS moderno y API-first para hoteles: rack de disponibilidad, reservas, check-in/check-out, folios con cargos y pagos Webpay, auditoría nocturna y housekeeping móvil con inspección.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="../index.html#contacto">Solicitar prueba gratis</a>
-            
+            <a class="btn btn-secondary" href="https://hotelflex.integralflex.cl" target="_blank" rel="noopener noreferrer">Abrir aplicación</a>
           </div>
-          <div class="phero-stack">Flask · PostgreSQL · API REST JWT · Webpay · 25/25 tests</div>
+          <a class="phero-url" href="https://hotelflex.integralflex.cl" target="_blank" rel="noopener noreferrer">hotelflex.integralflex.cl</a>
         </div>
         <div class="phero-panel reveal">
           <div class="window-card">
             <div class="window-dots"><span></span><span></span><span></span></div>
-            <div class="phero-big product-blue">🏨</div>
+            <div class="phero-big product-blue"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <h3 class="phero-panel-title">PMS-HotelFlex</h3>
             <p class="phero-panel-sub">Parte de IntegralFlex Suites</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">VISIÓN GENERAL</span>
+          <h2>Qué es PMS-HotelFlex</h2>
+        </div>
+        <div class="overview-text reveal">
+          <p>PMS-HotelFlex cubre el ciclo completo del huésped: desde la reserva en el rack de disponibilidad por tipo de habitación, pasando por el check-in con folio abierto, los cargos y pagos durante la estadía (incluido cobro online con Webpay), hasta el check-out y la auditoría nocturna que cierra el día con validaciones automáticas.</p>
+          <p>El módulo de housekeeping móvil genera tareas automáticamente según salidas y permanencias, con checklist por habitación, inspección de supervisión y reporte de daños que deriva en órdenes de mantenimiento. La arquitectura es API-first: toda la operación está disponible vía API REST /api/v1 con JWT, lista para integrarse con channel managers u otros sistemas, con soporte multihotel y 25/25 pruebas automáticas en verde.</p>
         </div>
       </div>
     </section>
@@ -64,37 +77,69 @@
         </div>
         <div class="feature-grid">
           <article class="benefit-card reveal feature-card">
-            <h3>🗓️ Rack de disponibilidad</h3>
-            <p>Calendario de habitaciones por tipo con disponibilidad en tiempo real.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <h3>Rack de disponibilidad</h3>
+            <p>Calendario de habitaciones por tipo con disponibilidad en tiempo real y creación de reservas desde la misma vista.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🛎️ Reservas y check-in/out</h3>
-            <p>Ciclo completo del huésped: reserva, llegada, estadía y salida.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <h3>Check-in / Check-out</h3>
+            <p>Ciclo completo del huésped con folio por estadía y estados de habitación actualizados.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>💵 Folios, cargos y pagos</h3>
-            <p>Cuenta por habitación con cargos, pagos y cobro online Webpay.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3>Folios, cargos y pagos</h3>
+            <p>Cuenta por habitación con cargos, pagos y cobro online mediante Webpay.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🌙 Auditoría nocturna</h3>
-            <p>Cierre diario automático con validaciones.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+            <h3>Auditoría nocturna</h3>
+            <p>Cierre diario automático con validaciones de consistencia.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🧹 Housekeeping móvil</h3>
-            <p>Tareas automáticas por salidas/permanencias, checklist e inspección de supervisión.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+            <h3>Housekeeping móvil</h3>
+            <p>Tareas generadas por salidas y permanencias, checklist por habitación e inspección de supervisión.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🔧 Daños a mantenimiento</h3>
-            <p>Reporte de daños que genera órdenes de mantenimiento.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <h3>Daños a mantenimiento</h3>
+            <p>El reporte de daños de housekeeping genera órdenes de mantenimiento con seguimiento.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>📊 Dashboard recepción/gerencia</h3>
-            <p>Ocupación, llegadas, salidas y métricas de productividad.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <h3>Dashboard de recepción y gerencia</h3>
+            <p>Ocupación, llegadas, salidas y métricas de productividad del equipo.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <h3>🔌 API REST con JWT</h3>
-            <p>API /api/v1 completa para integraciones, multihotel.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+            <h3>API REST con JWT</h3>
+            <p>API /api/v1 completa para integraciones, con soporte multihotel.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">MÓDULOS</span>
+          <h2>Módulos y pantallas</h2>
+        </div>
+        <div class="chip-list reveal">
+          <span class="chip">Hoteles y habitaciones</span>
+          <span class="chip">Rack / calendario</span>
+          <span class="chip">Reservas</span>
+          <span class="chip">Check-in / Check-out</span>
+          <span class="chip">Folios y pagos</span>
+          <span class="chip">Webpay</span>
+          <span class="chip">Auditoría nocturna</span>
+          <span class="chip">Housekeeping</span>
+          <span class="chip">Inspección</span>
+          <span class="chip">Mantenimiento</span>
+          <span class="chip">Dashboard</span>
+          <span class="chip">API REST</span>
+          <span class="chip">Usuarios y roles</span>
         </div>
       </div>
     </section>
@@ -110,29 +155,56 @@
             <div class="timeline-step">01</div>
             <div>
               <strong>Reserva</strong>
-              <p>Desde el rack con tipos y tarifas por habitación.</p>
+              <p>Desde el rack, con tipos de habitación y tarifas.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">02</div>
             <div>
               <strong>Recibe</strong>
-              <p>Check-in con folio abierto por huésped.</p>
+              <p>Check-in con folio abierto y estados de habitación al día.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">03</div>
             <div>
               <strong>Opera</strong>
-              <p>Housekeeping móvil y cargos durante la estadía.</p>
+              <p>Housekeeping móvil, cargos y pagos durante la estadía.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">04</div>
             <div>
               <strong>Cierra</strong>
-              <p>Check-out con pago Webpay y auditoría nocturna.</p>
+              <p>Check-out con Webpay y auditoría nocturna automática.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">FICHA TÉCNICA</span>
+          <h2>Especificaciones</h2>
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item reveal">
+            <h4>Aplicación</h4>
+            <p>Flask + PostgreSQL, pantallas Jinja + API REST</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Pagos</h4>
+            <p>Webpay integrado en folios</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Calidad</h4>
+            <p>25/25 pruebas automáticas (pytest)</p>
+          </div>
+          <div class="spec-item reveal">
+            <h4>Despliegue</h4>
+            <p>Debian 12, Gunicorn (socket) + Nginx en hotelflex.integralflex.cl</p>
           </div>
         </div>
       </div>
