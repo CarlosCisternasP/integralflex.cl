@@ -1017,8 +1017,77 @@ img {
 }
 
 .card-url:hover {
-  color: #1d61e0;
+  color: #c9dcff;
 }
+
+/* Tarjetas de aplicaciones en modo transparente sobre fondo oscuro */
+.product-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e8eefb;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.product-card:hover {
+  border-color: rgba(122, 162, 255, 0.35);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.3);
+}
+
+.product-card .product-top {
+  background: none;
+  min-height: 0;
+  padding-bottom: 14px;
+}
+
+.product-card .product-top::after {
+  display: none;
+}
+
+.product-card .product-icon {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.product-card .product-top.product-blue .product-icon { background: linear-gradient(135deg, #167dff, #1d61e0); }
+.product-card .product-top.product-green-deep .product-icon { background: linear-gradient(135deg, #0f8f58, #118e4b); }
+.product-card .product-top.product-orange .product-icon { background: linear-gradient(135deg, #ff8d21, #f97316); }
+.product-card .product-top.product-teal .product-icon { background: linear-gradient(135deg, #0fa48f, #0d8e8a); }
+.product-card .product-top.product-purple .product-icon { background: linear-gradient(135deg, #8758ff, #6d44e6); }
+.product-card .product-top.product-cyan .product-icon { background: linear-gradient(135deg, #15b7d9, #0d9cae); }
+.product-card .product-top.product-indigo .product-icon { background: linear-gradient(135deg, #5c6cff, #4338ca); }
+.product-card .product-top.product-amber .product-icon { background: linear-gradient(135deg, #f5a623, #d97b06); }
+.product-card .product-top.product-rose .product-icon { background: linear-gradient(135deg, #f75590, #d6336c); }
+.product-card .product-top.product-red .product-icon { background: linear-gradient(135deg, #ff5c5c, #d92638); }
+
+.product-card .product-body {
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.product-card .product-tags {
+  color: #9fb3d1;
+}
+
+.product-card .card-desc {
+  color: #c7d3e8;
+}
+
+.product-card .card-url {
+  color: #8ab4ff;
+}
+
+.product-card .enter-btn {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.product-card .enter-blue { background: rgba(36, 130, 255, 0.16); color: #8ab4ff; }
+.product-card .enter-green { background: rgba(24, 197, 111, 0.16); color: #6fe3a5; }
+.product-card .enter-orange { background: rgba(255, 141, 33, 0.16); color: #ffab6b; }
+.product-card .enter-green-soft { background: rgba(16, 180, 140, 0.16); color: #5fe0bd; }
+.product-card .enter-purple { background: rgba(135, 88, 255, 0.18); color: #b39bff; }
+.product-card .enter-cyan { background: rgba(21, 183, 217, 0.16); color: #6fd8ec; }
+.product-card .enter-amber { background: rgba(245, 166, 35, 0.16); color: #ffc46b; }
+.product-card .enter-rose { background: rgba(247, 85, 144, 0.16); color: #ff9dbf; }
 
 .footer-back {
   font-weight: 700;
