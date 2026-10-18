@@ -1547,3 +1547,68 @@ img {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 }
+
+/* Galería de capturas de producto */
+.shot-note {
+  text-align: center;
+  color: #9fb0c8;
+  font-size: 0.9rem;
+  margin: -8px auto 28px;
+  max-width: 720px;
+}
+
+.shot-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.shot {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.shot a {
+  display: block;
+  line-height: 0;
+}
+
+.shot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1358 / 820;
+  object-fit: cover;
+  object-position: top left;
+  transition: transform 0.3s ease;
+}
+
+.shot a:hover img {
+  transform: scale(1.02);
+}
+
+.shot figcaption {
+  padding: 14px 18px 16px;
+  color: #dbe5f5;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.shot figcaption strong {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.shot-wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 720px) {
+  .shot-gallery {
+    grid-template-columns: 1fr;
+  }
+}
