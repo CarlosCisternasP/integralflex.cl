@@ -1616,25 +1616,28 @@ img {
 .shot-free img {
   aspect-ratio: auto;
   object-fit: contain;
-  max-height: 560px;
-  background: #f4f6f9;
+  max-height: none;
 }
 
 .shot-free:not(.shot-wide) a {
-  background: #f4f6f9;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  padding: 18px 18px 0;
+  background: transparent;
 }
 
 .shot-free:not(.shot-wide) img {
   width: auto;
   max-width: 100%;
-  height: 460px;
+  height: 470px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 720px) {
   .shot-free:not(.shot-wide) img {
     height: auto;
-    max-height: 460px;
+    max-height: 520px;
   }
 }
