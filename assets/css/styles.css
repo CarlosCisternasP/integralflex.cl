@@ -1612,3 +1612,29 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+.shot-free img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  max-height: 560px;
+  background: #f4f6f9;
+}
+
+.shot-free:not(.shot-wide) a {
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+}
+
+.shot-free:not(.shot-wide) img {
+  width: auto;
+  max-width: 100%;
+  height: 460px;
+}
+
+@media (max-width: 720px) {
+  .shot-free:not(.shot-wide) img {
+    height: auto;
+    max-height: 460px;
+  }
+}
