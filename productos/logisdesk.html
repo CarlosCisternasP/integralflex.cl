@@ -125,7 +125,17 @@
           <article class="benefit-card reveal feature-card">
             <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
             <h3>Portal del transportista</h3>
-            <p>Viajes asignados, por confirmar, propuestas y confirmados, con buscador por nota de venta, cliente, comuna o patente. El transportista responde cada viaje y, en Mi Flota, registra sus camiones y choferes y carga su documentación.</p>
+            <p>Viajes asignados, por confirmar, propuestas y confirmados, con buscador por nota de venta, cliente, comuna o patente. El transportista acepta el viaje asignando patente y chofer de su flota, propone otra fecha o lo rechaza con su motivo. En Mi Flota registra sus camiones y choferes y carga su documentación.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+            <h3>Hoja de ruta digital del chofer</h3>
+            <p>El chofer ve el pedido, el cliente y el punto de retiro. Abre la navegación en Google Maps o Waze, envía su posición GPS, guarda el punto exacto, sube la evidencia fotográfica de la carga a SharePoint y marca el retiro realizado para ir a planta.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <h3>Seguimiento en vivo para el cliente</h3>
+            <p>El cliente ve en un mapa su retiro con el camión asignado, el estado del viaje, la distancia y la hora estimada de llegada considerando el tráfico.</p>
           </article>
           <article class="benefit-card reveal feature-card">
             <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
@@ -185,28 +195,40 @@
         <p class="shot-note reveal">Pantallas reales del sistema con datos de demostración: los nombres de clientes, empresas y direcciones son ficticios.</p>
         <div class="shot-gallery">
           <figure class="shot reveal shot-free shot-wide">
-            <a href="../assets/img/capturas/lf-cliente-solicitud.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-cliente-solicitud.jpg" alt="LogistFlex: Portal del cliente: nueva solicitud de retiro" loading="lazy" width="1700" height="1065"></a>
-            <figcaption><strong>Portal del cliente: nueva solicitud de retiro</strong>Servicio, material, peligrosidad, formato, camión sugerido y ubicación exacta en el mapa.</figcaption>
+            <a href="../assets/img/capturas/lf-cliente-solicitud.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-cliente-solicitud.jpg" alt="LogistFlex: 1. El cliente solicita el retiro" loading="lazy" width="1700" height="1065"></a>
+            <figcaption><strong>1. El cliente solicita el retiro</strong>Servicio, material, peligrosidad, formato, camión sugerido y ubicación exacta en el mapa.</figcaption>
           </figure>
           <figure class="shot reveal shot-free shot-wide">
-            <a href="../assets/img/capturas/lf-cliente-panel.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-cliente-panel.jpg" alt="LogistFlex: Portal del cliente: seguimiento" loading="lazy" width="1700" height="545"></a>
-            <figcaption><strong>Portal del cliente: seguimiento</strong>Solicitudes, viajes activos e historial con su estado, y acceso a los certificados en CertiFlex.</figcaption>
-          </figure>
-          <figure class="shot reveal shot-free shot-wide">
-            <a href="../assets/img/capturas/lf-validacion.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-validacion.jpg" alt="LogistFlex: Validación de solicitudes" loading="lazy" width="1700" height="250"></a>
-            <figcaption><strong>Validación de solicitudes</strong>Coordinación aprueba o rechaza, con alerta de las críticas con más de 48 horas.</figcaption>
+            <a href="../assets/img/capturas/lf-validacion.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-validacion.jpg" alt="LogistFlex: 2. Coordinación valida" loading="lazy" width="1700" height="250"></a>
+            <figcaption><strong>2. Coordinación valida</strong>Aprobación o rechazo, con alerta de las solicitudes críticas con más de 48 horas.</figcaption>
           </figure>
           <figure class="shot reveal shot-free">
             <a href="../assets/img/capturas/lf-aprobar.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-aprobar.jpg" alt="LogistFlex: Aprobación con nota de venta SAP" loading="lazy" width="382" height="473"></a>
             <figcaption><strong>Aprobación con nota de venta SAP</strong>Se asocia la nota de venta y se verifica la dirección para navegar con GPS.</figcaption>
           </figure>
           <figure class="shot reveal shot-free">
-            <a href="../assets/img/capturas/lf-asignacion.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-asignacion.jpg" alt="LogistFlex: Asignación al transportista" loading="lazy" width="380" height="794"></a>
-            <figcaption><strong>Asignación al transportista</strong>Fuente del costo por contrato o spot, cotización de la ruta GPS y envío al transportista.</figcaption>
+            <a href="../assets/img/capturas/lf-cotizacion.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-cotizacion.jpg" alt="LogistFlex: 3. Cotización y asignación" loading="lazy" width="377" height="726"></a>
+            <figcaption><strong>3. Cotización y asignación</strong>Ruta GPS con kilómetros, tiempo estimado, peajes y costo según el contrato vigente.</figcaption>
           </figure>
           <figure class="shot reveal shot-free shot-wide">
-            <a href="../assets/img/capturas/lf-dashboard.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-dashboard.jpg" alt="LogistFlex: Dashboard administrativo" loading="lazy" width="1700" height="561"></a>
-            <figcaption><strong>Dashboard administrativo</strong>Indicadores, validación de costos de transporte y acciones rápidas, incluida la Control Tower y la auditoría.</figcaption>
+            <a href="../assets/img/capturas/lf-transp-responder.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-transp-responder.jpg" alt="LogistFlex: 4. El transportista responde" loading="lazy" width="1700" height="680"></a>
+            <figcaption><strong>4. El transportista responde</strong>Acepta asignando patente y chofer de su flota, propone otra fecha o rechaza el viaje.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-free shot-wide">
+            <a href="../assets/img/capturas/lf-ya-asignados.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-ya-asignados.jpg" alt="LogistFlex: Viaje confirmado" loading="lazy" width="1700" height="145"></a>
+            <figcaption><strong>Viaje confirmado</strong>Coordinación ve el viaje asignado y confirmado por el transportista, con patente y conductor.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-free shot-wide">
+            <a href="../assets/img/capturas/lf-hoja-ruta.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-hoja-ruta.jpg" alt="LogistFlex: 5. Hoja de ruta digital del chofer" loading="lazy" width="1700" height="780"></a>
+            <figcaption><strong>5. Hoja de ruta digital del chofer</strong>Navegación con Maps o Waze, envío de la posición GPS, evidencia fotográfica a SharePoint y cierre del retiro.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-free shot-wide">
+            <a href="../assets/img/capturas/lf-seguimiento.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-seguimiento.jpg" alt="LogistFlex: 6. Seguimiento en vivo para el cliente" loading="lazy" width="1700" height="365"></a>
+            <figcaption><strong>6. Seguimiento en vivo para el cliente</strong>Camión, estado y llegada estimada con tráfico, sobre el mapa.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-free shot-wide">
+            <a href="../assets/img/capturas/lf-cliente-panel.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-cliente-panel.jpg" alt="LogistFlex: Portal del cliente" loading="lazy" width="1700" height="545"></a>
+            <figcaption><strong>Portal del cliente</strong>Solicitudes, viajes activos e historial con su estado, y acceso a los certificados en CertiFlex.</figcaption>
           </figure>
           <figure class="shot reveal shot-free shot-wide">
             <a href="../assets/img/capturas/lf-coordinacion.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-coordinacion.jpg" alt="LogistFlex: Coordinación logística" loading="lazy" width="1700" height="299"></a>
@@ -217,20 +239,20 @@
             <figcaption><strong>Planificador de capacidad</strong>Máximo de notas de venta por día y respuestas del transportista para aprobar y notificar al cliente.</figcaption>
           </figure>
           <figure class="shot reveal shot-free shot-wide">
-            <a href="../assets/img/capturas/lf-transp-viajes.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-transp-viajes.jpg" alt="LogistFlex: Portal del transportista: mis viajes" loading="lazy" width="1700" height="399"></a>
-            <figcaption><strong>Portal del transportista: mis viajes</strong>Cada transportista ve y responde sus viajes asignados, con camión y chofer.</figcaption>
-          </figure>
-          <figure class="shot reveal shot-free shot-wide">
-            <a href="../assets/img/capturas/lf-mi-flota.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-mi-flota.jpg" alt="LogistFlex: Portal del transportista: Mi Flota" loading="lazy" width="1700" height="652"></a>
-            <figcaption><strong>Portal del transportista: Mi Flota</strong>Registro de camiones y choferes con su licencia, vencimiento y documentos.</figcaption>
-          </figure>
-          <figure class="shot reveal shot-free shot-wide">
-            <a href="../assets/img/capturas/lf-control-tower.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-control-tower.jpg" alt="LogistFlex: Control Tower" loading="lazy" width="1700" height="705"></a>
-            <figcaption><strong>Control Tower</strong>Mapa con geocerca de la planta y alertas de arribos cercanos.</figcaption>
+            <a href="../assets/img/capturas/lf-control-tower.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-control-tower.jpg" alt="LogistFlex: 7. Control Tower en planta" loading="lazy" width="1700" height="705"></a>
+            <figcaption><strong>7. Control Tower en planta</strong>Mapa con geocerca de la planta y alertas de arribos cercanos.</figcaption>
           </figure>
           <figure class="shot reveal shot-free shot-wide">
             <a href="../assets/img/capturas/lf-romana.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-romana.jpg" alt="LogistFlex: Control de romana" loading="lazy" width="1700" height="669"></a>
             <figcaption><strong>Control de romana</strong>Pesaje de entrada y salida con peso neto descargado y estado en planta.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-free shot-wide">
+            <a href="../assets/img/capturas/lf-dashboard.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-dashboard.jpg" alt="LogistFlex: Dashboard administrativo" loading="lazy" width="1700" height="561"></a>
+            <figcaption><strong>Dashboard administrativo</strong>Indicadores, validación de costos de transporte y acciones rápidas, incluida la Control Tower y la auditoría.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-free shot-wide">
+            <a href="../assets/img/capturas/lf-mi-flota.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-mi-flota.jpg" alt="LogistFlex: Mi Flota del transportista" loading="lazy" width="1700" height="652"></a>
+            <figcaption><strong>Mi Flota del transportista</strong>Registro de camiones y choferes con su licencia, vencimiento y documentos.</figcaption>
           </figure>
           <figure class="shot reveal shot-free">
             <a href="../assets/img/capturas/lf-calculadora.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/lf-calculadora.jpg" alt="LogistFlex: Calculadora de rutas GPS" loading="lazy" width="990" height="715"></a>
@@ -252,6 +274,8 @@
         </div>
         <div class="chip-list reveal">
           <span class="chip">Portal del cliente</span>
+          <span class="chip">Seguimiento en vivo</span>
+          <span class="chip">Hoja de ruta del chofer</span>
           <span class="chip">Panel ejecutivo</span>
           <span class="chip">Mi Flota</span>
           <span class="chip">Dashboard</span>
@@ -287,42 +311,56 @@
             <div class="timeline-step">01</div>
             <div>
               <strong>Solicita</strong>
-              <p>El cliente pide el retiro o transporte, o la nota de venta llega desde SAP.</p>
+              <p>El cliente crea el retiro en su portal, con material, peligrosidad y ubicación exacta en el mapa.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">02</div>
-            <div>
-              <strong>Coordina</strong>
-              <p>Se valida, se agenda según los cupos de planta y se asigna al transportista con su costo.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-step">03</div>
-            <div>
-              <strong>Confirma</strong>
-              <p>El transportista acepta o propone otra fecha y asigna la patente y el chofer.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-step">04</div>
             <div>
               <strong>Valida</strong>
               <p>Coordinación aprueba la solicitud, la asocia a su nota de venta SAP y revisa el crédito del cliente.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
+            <div class="timeline-step">03</div>
+            <div>
+              <strong>Cotiza y asigna</strong>
+              <p>Se elige al transportista, se cotiza la ruta GPS con peajes según el contrato o la tarifa spot, y se envía el viaje.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-step">04</div>
+            <div>
+              <strong>Confirma</strong>
+              <p>El transportista acepta con su patente y chofer, o propone otra fecha. Coordinación aprueba y se notifica al cliente.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
             <div class="timeline-step">05</div>
+            <div>
+              <strong>Ejecuta</strong>
+              <p>El chofer sigue su hoja de ruta digital con GPS, sube la evidencia de carga y marca el retiro realizado.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-step">06</div>
+            <div>
+              <strong>Sigue</strong>
+              <p>El cliente ve el estado y la llegada estimada del camión en el mapa.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-step">07</div>
             <div>
               <strong>Recibe</strong>
               <p>Control Tower, portería y romana registran el arribo, la descarga y el peso neto.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
-            <div class="timeline-step">06</div>
+            <div class="timeline-step">08</div>
             <div>
               <strong>Mide</strong>
-              <p>El estado se informa al cliente y la gerencia ve el costo y el margen de cada viaje.</p>
+              <p>La gerencia ve el costo, los peajes y el margen de cada viaje.</p>
             </div>
           </div>
         </div>
