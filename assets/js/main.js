@@ -57,6 +57,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const quote = document.getElementById('cotizar');
+  if (quote) {
+    const TIERS = [
+      { name: 'Básico', min: 3, max: 5, price: 15.9 },
+      { name: 'Profesional', min: 6, max: 15, price: 12.9 },
+      { name: 'Enterprise', min: 16, max: 50, price: 9.9 },
+      { name: 'Premium', min: 51, max: Infinity, price: 6.9 }
+    ];
+    const usersEl = document.getElementById('qUsers');
+    const fmt = n => 'USD ' + n.toLocaleString('es-CL', { minimumFractionDigits: n % 1 ? 1 : 0, maximumFractionDigits: 2 });
+    const state = {};
+    function calc() {
+      let u = parseInt(usersEl.value, 10);
+      if (!Number.isFinite(u) || u < 3) u = 3;
+      const tier = TIERS.find(x => u >= x.min && u <= x.max);
+      const apps = [...quote.querySelectorAll('input[name=qapp]:checked')].map(i => i.value);
+      const per = Math.round(u * tier.price * 100) / 100;
+      const total = Math.round(per * apps.length * 100) / 100;
+      document.getElementById('qPlan').textContent = tier.name;
+      document.getElementById('qUnit').textContent = fmt(tier.price);
+      document.getElementById('qLines').innerHTML = apps.length
+        ? apps.map(a => `<div><span>${a} · ${u} usuarios</span><span>${fmt(per)}</span></div>`).join('')
+        : '<div class="quote-empty">Selecciona al menos una aplicación.</div>';
+      document.getElementById('qTotal').textContent = fmt(total);
+      document.getElementById('qAnnual').textContent = apps.length ? `${fmt(Math.round(total * 12 * 100) / 100)} al año` : '';
+      document.querySelectorAll('.pricing-4 .price-card').forEach(c => {
+        c.classList.toggle('is-current', c.querySelector('.price-tag').textContent === tier.name);
+      });
+      Object.assign(state, { u, tier, apps, total });
+    }
+    quote.addEventListener('change', calc);
+    usersEl.addEventListener('input', calc);
+    usersEl.addEventListener('blur', () => { if (!(parseInt(usersEl.value, 10) >= 3)) usersEl.value = 3; calc(); });
+    quote.querySelectorAll('.q-step').forEach(b => b.addEventListener('click', () => {
+      usersEl.value = Math.max(3, (parseInt(usersEl.value, 10) || 3) + Number(b.dataset.step));
+      calc();
+    }));
+    document.getElementById('qSend').addEventListener('click', () => {
+      const f = document.getElementById('contactForm');
+      if (!f) return;
+      if (!state.apps.length) { quote.querySelector('.q-app span').focus?.(); return; }
+      const sel = f.querySelector('select[name=producto]');
+      if (sel) sel.value = state.apps.length === 1 ? state.apps[0] : 'Suite completa';
+      f.querySelector('textarea[name=mensaje]').value =
+        `Solicito cotización:\n- Aplicaciones: ${state.apps.join(', ')}\n- Usuarios: ${state.u}\n- Plan ${state.tier.name}: ${fmt(state.tier.price)} por usuario al mes por aplicación\n- Total estimado: ${fmt(state.total)} al mes + IVA`;
+      f.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => f.querySelector('input[name=nombre]').focus({ preventScroll: true }), 500);
+    });
+    calc();
+  }
+
   const canvas = document.getElementById('networkCanvas');
   if (!canvas || getComputedStyle(canvas).display === 'none') return;
   const ctx = canvas.getContext('2d');

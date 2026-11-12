@@ -1645,3 +1645,55 @@ main > section:nth-of-type(even):not(.hero):not(.phero):not(.cta) {
     max-height: 520px;
   }
 }
+
+/* ---------- Precios por aplicación (USD) y cotizador ---------- */
+.pricing-grid.pricing-4 { grid-template-columns: repeat(4, 1fr); }
+.price-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.price-badge { background: var(--azure); color: #fff; font-size: 0.72rem; font-weight: 600; padding: 3px 8px; border-radius: 2px; letter-spacing: .02em; }
+.price-users { margin-top: 14px; font-weight: 600; color: var(--azure-pressed); font-size: 0.95rem; }
+.price-card .price-amount { margin: 8px 0 2px; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.price-amount small { font-size: 0.95rem; font-weight: 600; color: var(--muted); }
+.price-note { margin: 0 0 10px; font-size: 0.82rem; color: var(--muted); }
+.price-card > p { color: var(--text-2); margin: 0 0 12px; }
+.price-card ul.price-list { list-style: none; padding: 0; margin: 0 0 4px; line-height: 1.5; font-size: 0.92rem; }
+.price-list li { display: flex; gap: 8px; align-items: flex-start; padding: 5px 0; border-top: 1px solid var(--line-2); }
+.price-list svg { flex: none; color: var(--ok); margin-top: 3px; }
+.price-card .price-cta { margin-top: auto; align-self: stretch; text-align: center; justify-content: center; }
+.price-card .price-list { margin-bottom: 18px; }
+
+.quote { margin-top: 36px; display: grid; grid-template-columns: 1.5fr 1fr; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--depth-8); overflow: hidden; }
+.quote-form { padding: 32px; }
+.quote-form h3 { margin: 10px 0 4px; font-size: 1.5rem; font-weight: 600; }
+.quote-sub { color: var(--muted); margin: 0 0 18px; }
+.q-apps { border: 0; padding: 0; margin: 0 0 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+.q-apps legend { font-weight: 600; margin-bottom: 10px; padding: 0; }
+.q-app { cursor: pointer; }
+.q-app input { position: absolute; opacity: 0; pointer-events: none; }
+.q-app span { display: inline-block; padding: 7px 12px; border: 1px solid var(--line); border-radius: 2px; font-size: 0.9rem; background: var(--bg-alt-2); transition: all .15s; user-select: none; }
+.q-app:hover span { border-color: var(--azure); }
+.q-app input:checked + span { background: var(--azure); border-color: var(--azure); color: #fff; }
+.q-app input:focus-visible + span { outline: 2px solid var(--azure-dark); outline-offset: 2px; }
+.q-users { display: block; font-weight: 600; }
+.q-users-row { display: inline-flex; margin-top: 8px; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
+.q-users-row input { width: 90px; border: 0; text-align: center; font: inherit; font-size: 1.1rem; padding: 8px; -moz-appearance: textfield; }
+.q-users-row input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.q-step { width: 42px; border: 0; background: var(--bg-alt); font-size: 1.2rem; cursor: pointer; }
+.q-step:hover { background: var(--tint-2); }
+.quote-result { background: var(--navy); color: #fff; padding: 32px; display: flex; flex-direction: column; gap: 10px; }
+.q-plan { font-size: 1rem; color: #c7e0f4; }
+.q-plan strong { color: #fff; font-size: 1.35rem; margin-left: 4px; }
+.q-unit { color: #c7e0f4; font-size: 0.92rem; }
+.q-unit span { color: #fff; font-weight: 600; }
+.q-lines { border-top: 1px solid rgba(255,255,255,.15); padding-top: 10px; font-size: 0.9rem; display: grid; gap: 6px; max-height: 190px; overflow: auto; }
+.q-lines div { display: flex; justify-content: space-between; gap: 12px; color: #deecf9; }
+.q-total { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(255,255,255,.25); padding-top: 12px; margin-top: auto; }
+.q-total strong { font-size: 2rem; font-weight: 600; }
+.q-annual { color: #c7e0f4; font-size: 0.88rem; min-height: 1.2em; }
+.q-send { margin-top: 6px; justify-content: center; }
+.q-fine { font-size: 0.78rem; color: #a6c8e6; margin: 0; }
+.quote-empty { color: #a6c8e6; }
+
+@media (max-width: 1100px) { .pricing-grid.pricing-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 860px) { .quote { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .pricing-grid.pricing-4 { grid-template-columns: 1fr; } .quote-form, .quote-result { padding: 22px; } }
+.price-card.is-current { box-shadow: 0 0 0 2px var(--azure), var(--depth-16); }
