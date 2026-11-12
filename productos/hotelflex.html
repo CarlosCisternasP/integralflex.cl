@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PMS-HotelFlex | IntegralFlex Suites</title>
-  <meta name="description" content="Sistema de gestión hotelera (PMS). PMS moderno y API-first para hoteles: rack de disponibilidad, reservas, check-in/check-out, folios con cargos y pagos We" />
+  <meta name="description" content="PMS-HotelFlex: sistema de gestión hotelera multi-propiedad. Rack de habitaciones, reservas, check-in y check-out, huéspedes y CRM de fidelización, housekeeping, POS, cobros y no-show, revenue con pricing dinámico, pace y pickup, reportes, reputación y NPS, insights con IA y motor de reservas directas." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -37,8 +37,8 @@
       <div class="container phero-layout">
         <div class="phero-copy reveal">
           <div class="phero-badge product-blue"><span class="phero-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> PMS-HotelFlex</div>
-          <h1>Sistema de gestión hotelera (PMS)</h1>
-          <p>PMS moderno y API-first para hoteles: rack de disponibilidad, reservas, check-in/check-out, folios con cargos y pagos Webpay, auditoría nocturna y housekeeping móvil con inspección.</p>
+          <h1>Gestión hotelera completa, del rack a la reserva directa</h1>
+          <p>Opera recepción, reservas, housekeeping y punto de venta desde un solo sistema, ajusta tarifas según la demanda con pricing dinámico y recibe reservas directas en tu propio motor de reservas, con análisis gerencial generado por IA.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="../index.html#contacto">Solicitar prueba gratis</a>
             <a class="btn btn-secondary" href="https://hotelflex.integralflex.cl" target="_blank" rel="noopener noreferrer">Abrir aplicación</a>
@@ -63,8 +63,9 @@
           <h2>Qué es PMS-HotelFlex</h2>
         </div>
         <div class="overview-text reveal">
-          <p>PMS-HotelFlex cubre el ciclo completo del huésped: desde la reserva en el rack de disponibilidad por tipo de habitación, pasando por el check-in con folio abierto, los cargos y pagos durante la estadía (incluido cobro online con Webpay), hasta el check-out y la auditoría nocturna que cierra el día con validaciones automáticas.</p>
-          <p>El módulo de housekeeping móvil genera tareas automáticamente según salidas y permanencias, con checklist por habitación, inspección de supervisión y reporte de daños que deriva en órdenes de mantenimiento. La arquitectura es API-first: toda la operación está disponible vía API REST /api/v1 con JWT, lista para integrarse con channel managers u otros sistemas, con soporte multihotel y 25/25 pruebas automáticas en verde.</p>
+          <p>PMS-HotelFlex es el sistema de gestión hotelera de IntegralFlex Suites. Administra uno o varios hoteles con sus tipos de habitación, habitaciones, servicios y tarifas por temporada, y cada colaborador trabaja con su rol: gerencia, recepción, reservas, housekeeping, mantenimiento, caja, POS y seguridad.</p>
+          <p>Recepción ve el rack de habitaciones por día, crea reservas, hace check-in y check-out y gestiona la cuenta de cada huésped. Housekeeping genera las tareas del día por salidas y permanencias y las asigna a cada mucama, y el POS carga los consumos de bar, restaurante o minibar a la habitación. El CRM segmenta a los huéspedes por valor, asigna puntos de fidelización y abre conversaciones por WhatsApp.</p>
+          <p>Para la gerencia, Revenue sugiere y aplica tarifas dinámicas según la ocupación prevista, con restricciones de estadía mínima y días sin llegada. Reportes, Pace y Pickup muestran ocupación, ADR, RevPAR e ingresos por canal; Reputación mide el NPS de la encuesta post-estadía y dirige a las reseñas de Google y Booking; e Insights IA entrega un briefing con alertas de demanda y acciones sugeridas.</p>
         </div>
       </div>
     </section>
@@ -77,45 +78,132 @@
         </div>
         <div class="feature-grid">
           <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <h3>Rack de disponibilidad</h3>
-            <p>Calendario de habitaciones por tipo con disponibilidad en tiempo real y creación de reservas desde la misma vista.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+            <h3>Rack de habitaciones</h3>
+            <p>Vista por habitación y día de 7, 14 o 30 días con ocupación y tarifa diaria, y creación de tarifas desde el mismo rack.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
+            <h3>Reservas, check-in y check-out</h3>
+            <p>Reservas con huésped, fechas, noches y total estimado, y su avance: reservada, en casa, salida, cancelada o no-show.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
+            <h3>Huéspedes y CRM</h3>
+            <p>Ficha del huésped con documento, contacto y nacionalidad; clientes por valor con estadías, noches y gasto, segmentos VIP, frecuente, corporativo o agencia y puntos de fidelización.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <h3>Mensajes y WhatsApp</h3>
+            <p>Bandeja de conversaciones con los huéspedes y campañas por WhatsApp para recuperar clientes.</p>
           </article>
           <article class="benefit-card reveal feature-card">
             <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-            <h3>Check-in / Check-out</h3>
-            <p>Ciclo completo del huésped con folio por estadía y estados de habitación actualizados.</p>
+            <h3>Housekeeping</h3>
+            <p>Tareas del día por salidas, permanencias, limpieza profunda e inspección, asignadas a cada mucama, con tiempo promedio de limpieza.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-            <h3>Folios, cargos y pagos</h3>
-            <p>Cuenta por habitación con cargos, pagos y cobro online mediante Webpay.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div>
+            <h3>POS y consumos</h3>
+            <p>Punto de venta para cargar consumos de bar, restaurante o minibar a la cuenta de las habitaciones en casa.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
-            <h3>Auditoría nocturna</h3>
-            <p>Cierre diario automático con validaciones de consistencia.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Cobros, depósitos y no-show</h3>
+            <p>Política de depósito sugerido y cargo por no-show, depósitos de las próximas llegadas y preparación para pre-autorización con Transbank Oneclick.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <h3>Revenue y pricing dinámico</h3>
+            <p>Tarifas sugeridas para los próximos 14 días según la ocupación prevista, aplicables con un clic, y restricciones de estadía mínima y días sin llegada.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3>Pace y pickup</h3>
+            <p>Reservas nuevas y noches vendidas de los últimos 7 días, on-the-books de 30 días y reservas creadas por día.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3>Reportes gerenciales</h3>
+            <p>Ocupación, ADR, RevPAR, ingresos de alojamiento y por canal, con detalle por día y exportación a Excel y PDF.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <h3>Insights IA</h3>
+            <p>Briefing del gerente generado con IA, alertas de demanda por día, riesgo de no-show y tarifa sugerida.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.83z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+            <h3>Reputación y NPS</h3>
+            <p>Encuesta post-estadía con NPS y nota promedio, comentarios recientes y enlaces a las reseñas de Google y Booking.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <h3>Tipos, habitaciones y tarifas</h3>
+            <p>Tipos de habitación con capacidad, camas, amenidades, fotos y feed iCal para Booking y Airbnb, habitaciones, servicios y tarifas por temporada.</p>
           </article>
           <article class="benefit-card reveal feature-card">
             <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-            <h3>Housekeeping móvil</h3>
-            <p>Tareas generadas por salidas y permanencias, checklist por habitación e inspección de supervisión.</p>
+            <h3>Motor de reservas directas</h3>
+            <p>Sitio de reservas del hotel en español e inglés con disponibilidad en tiempo real, tarifas directas y fotos, instalable como app.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-            <h3>Daños a mantenimiento</h3>
-            <p>El reporte de daños de housekeeping genera órdenes de mantenimiento con seguimiento.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Multi-propiedad, roles y API</h3>
+            <p>Varios hoteles aislados por propiedad, colaboradores con roles y permisos, modo noche y API documentada.</p>
           </article>
-          <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-            <h3>Dashboard de recepción y gerencia</h3>
-            <p>Ocupación, llegadas, salidas y métricas de productividad del equipo.</p>
-          </article>
-          <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-            <h3>API REST con JWT</h3>
-            <p>API /api/v1 completa para integraciones, con soporte multihotel.</p>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="capturas">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">CAPTURAS</span>
+          <h2>Así se ve PMS-HotelFlex</h2>
+        </div>
+        <p class="shot-note reveal">Pantallas reales del sistema con el hotel de demostración: huéspedes y reservas son ficticios.</p>
+        <div class="shot-gallery">
+          <figure class="shot reveal shot-wide">
+            <a href="../assets/img/capturas/hf-dashboard.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-dashboard.jpg" alt="PMS-HotelFlex: Dashboard" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Dashboard</strong>Ocupación, llegadas, salidas, huéspedes en casa, ADR, RevPAR, NPS y operación del día.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-reservas.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-reservas.jpg" alt="PMS-HotelFlex: Reservas" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Reservas</strong>Reservas con huésped, fechas, noches, total estimado y estado.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-crm.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-crm.jpg" alt="PMS-HotelFlex: CRM y fidelización" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>CRM y fidelización</strong>Huéspedes por valor con segmento, puntos y contacto por WhatsApp.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-rack.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-rack.jpg" alt="PMS-HotelFlex: Rack de habitaciones" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Rack de habitaciones</strong>Vista por habitación y día con ocupación y tarifa diaria.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-revenue.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-revenue.jpg" alt="PMS-HotelFlex: Revenue y pricing dinámico" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Revenue y pricing dinámico</strong>Tarifas sugeridas según ocupación y restricciones de estadía.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-insights.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-insights.jpg" alt="PMS-HotelFlex: Insights IA" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Insights IA</strong>Briefing del gerente y alertas de demanda con acción sugerida.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-reportes.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-reportes.jpg" alt="PMS-HotelFlex: Reportes gerenciales" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Reportes gerenciales</strong>Ocupación, ADR, RevPAR e ingresos por canal con exportación.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-housekeeping.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-housekeeping.jpg" alt="PMS-HotelFlex: Housekeeping" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Housekeeping</strong>Generación y asignación de tareas de limpieza del día.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/hf-cobros.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-cobros.jpg" alt="PMS-HotelFlex: Cobros y no-show" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Cobros y no-show</strong>Política de depósitos, cargo por no-show y depósitos de próximas llegadas.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-wide">
+            <a href="../assets/img/capturas/hf-reservar.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/hf-reservar.jpg" alt="PMS-HotelFlex: Motor de reservas directas" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Motor de reservas directas</strong>Disponibilidad en tiempo real y tarifas directas para el huésped.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -127,19 +215,29 @@
           <h2>Módulos y pantallas</h2>
         </div>
         <div class="chip-list reveal">
-          <span class="chip">Hoteles y habitaciones</span>
-          <span class="chip">Rack / calendario</span>
-          <span class="chip">Reservas</span>
-          <span class="chip">Check-in / Check-out</span>
-          <span class="chip">Folios y pagos</span>
-          <span class="chip">Webpay</span>
-          <span class="chip">Auditoría nocturna</span>
-          <span class="chip">Housekeeping</span>
-          <span class="chip">Inspección</span>
-          <span class="chip">Mantenimiento</span>
           <span class="chip">Dashboard</span>
-          <span class="chip">API REST</span>
-          <span class="chip">Usuarios y roles</span>
+          <span class="chip">Reportes</span>
+          <span class="chip">Reputación</span>
+          <span class="chip">Pace / Pickup</span>
+          <span class="chip">Revenue</span>
+          <span class="chip">Rack habitaciones</span>
+          <span class="chip">Reservas</span>
+          <span class="chip">Huéspedes</span>
+          <span class="chip">CRM</span>
+          <span class="chip">Mensajes</span>
+          <span class="chip">Housekeeping</span>
+          <span class="chip">POS</span>
+          <span class="chip">Cobros</span>
+          <span class="chip">Insights IA</span>
+          <span class="chip">Tipos de habitación</span>
+          <span class="chip">Habitaciones</span>
+          <span class="chip">Servicios</span>
+          <span class="chip">Tarifas por temporada</span>
+          <span class="chip">Hoteles e imágenes</span>
+          <span class="chip">Colaboradores</span>
+          <span class="chip">Roles y permisos</span>
+          <span class="chip">API</span>
+          <span class="chip">Sitio de reservas</span>
         </div>
       </div>
     </section>
@@ -154,29 +252,36 @@
           <div class="timeline-item reveal">
             <div class="timeline-step">01</div>
             <div>
-              <strong>Reserva</strong>
-              <p>Desde el rack, con tipos de habitación y tarifas.</p>
+              <strong>Configura</strong>
+              <p>Registra el hotel, tipos de habitación, habitaciones, tarifas y colaboradores.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">02</div>
             <div>
-              <strong>Recibe</strong>
-              <p>Check-in con folio abierto y estados de habitación al día.</p>
+              <strong>Vende</strong>
+              <p>Recibe reservas directas en tu motor de reservas o créalas desde el rack.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">03</div>
             <div>
               <strong>Opera</strong>
-              <p>Housekeeping móvil, cargos y pagos durante la estadía.</p>
+              <p>Check-in, housekeeping, consumos en el POS y check-out con la cuenta del huésped.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">04</div>
             <div>
-              <strong>Cierra</strong>
-              <p>Check-out con Webpay y auditoría nocturna automática.</p>
+              <strong>Fideliza</strong>
+              <p>Encuesta post-estadía, reseñas, segmentos y campañas por WhatsApp.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-step">05</div>
+            <div>
+              <strong>Optimiza</strong>
+              <p>Pricing dinámico, pace, reportes e insights con IA para decidir tarifas.</p>
             </div>
           </div>
         </div>
@@ -192,19 +297,19 @@
         <div class="spec-grid">
           <div class="spec-item reveal">
             <h4>Aplicación</h4>
-            <p>Flask + PostgreSQL, pantallas Jinja + API REST</p>
+            <p>Flask + PostgreSQL, web instalable como app, con modo claro y noche</p>
           </div>
           <div class="spec-item reveal">
-            <h4>Pagos</h4>
-            <p>Webpay integrado en folios</p>
+            <h4>Canales</h4>
+            <p>Motor de reservas propio en español e inglés y feed iCal para Booking y Airbnb</p>
           </div>
           <div class="spec-item reveal">
-            <h4>Calidad</h4>
-            <p>25/25 pruebas automáticas (pytest)</p>
+            <h4>Integraciones</h4>
+            <p>WhatsApp, Transbank Oneclick, exportación Excel y PDF y API documentada</p>
           </div>
           <div class="spec-item reveal">
-            <h4>Despliegue</h4>
-            <p>Debian 12, Gunicorn (socket) + Nginx en hotelflex.integralflex.cl</p>
+            <h4>Seguridad</h4>
+            <p>Aislamiento por hotel, roles y permisos por colaborador</p>
           </div>
         </div>
       </div>
