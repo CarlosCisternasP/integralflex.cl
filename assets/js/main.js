@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const canvas = document.getElementById('networkCanvas');
-  if (!canvas) return;
+  if (!canvas || getComputedStyle(canvas).display === 'none') return;
   const ctx = canvas.getContext('2d');
   let particles = [];
   function resize() {
