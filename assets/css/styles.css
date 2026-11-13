@@ -1768,3 +1768,6 @@ main > section:nth-of-type(even):not(.hero):not(.phero):not(.cta) {
 .addon p { margin: 8px 0 0; color: var(--text-2); font-size: .9rem; }
 @media (max-width: 1100px) { .addon-grid { grid-template-columns: repeat(2, 1fr); } .svc-volume-grid { grid-template-columns: 1fr; } }
 @media (max-width: 720px) { .addon-grid { grid-template-columns: 1fr; } }
+.svc-plus-fig { margin: 0; }
+.svc-ticket-fig { margin: 28px 0 0; }
+.svc-ticket-fig + .shot-note { margin-top: 14px; }
