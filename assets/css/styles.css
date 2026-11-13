@@ -1732,3 +1732,39 @@ main > section:nth-of-type(even):not(.hero):not(.phero):not(.cta) {
 .svc-plus-shot img { display: block; width: 100%; height: auto; }
 @media (max-width: 1100px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } .svc-plus { grid-template-columns: 1fr; } .hero .hero-panel, .phero-panel:has(.svc-panel) { justify-self: stretch; max-width: none; margin-top: 0; } }
 @media (max-width: 720px) { .svc-grid { grid-template-columns: 1fr; } }
+
+/* ---------- ServicesDesk: matriz de cobros ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.svc-matrix, .svc-volume, .svc-addons { margin-top: 48px; }
+.svc-matrix-head { margin-bottom: 16px; }
+.svc-matrix-head h3 { margin: 0 0 4px; font-size: 1.4rem; font-weight: 600; }
+.svc-matrix-head p { margin: 0; color: var(--muted); }
+.cm-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--depth-4); }
+.cm-table { width: 100%; border-collapse: collapse; font-size: .93rem; min-width: 640px; }
+.cm-table th, .cm-table td { padding: 12px 16px; border-bottom: 1px solid var(--line-2); text-align: center; }
+.cm-table tbody tr:last-child th, .cm-table tbody tr:last-child td { border-bottom: 0; }
+.cm-table tbody th { text-align: left; font-weight: 500; color: var(--text); }
+.cm-table thead th { background: var(--navy); color: #fff; font-weight: 600; font-size: .95rem; }
+.cm-table thead th.cm-hl { background: var(--azure); }
+.cm-table td.cm-hl { background: rgba(0,120,212,.06); font-weight: 500; }
+.cm-table tbody tr:hover { background: var(--bg-alt-2); }
+.cm-yes { display: inline-flex; width: 24px; height: 24px; align-items: center; justify-content: center; border-radius: 50%; background: rgba(16,124,16,.12); color: var(--ok); }
+.cm-no { color: #a19f9d; }
+.cm-vol { min-width: 520px; }
+.cm-vol td { font-weight: 600; color: var(--azure-pressed); }
+.svc-volume-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; align-items: start; }
+.svc-calc { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 12px; }
+.svc-calc label { display: flex; flex-direction: column; gap: 6px; font-size: .88rem; color: #c7e0f4; font-weight: 600; }
+.svc-calc select, .svc-calc input { font: inherit; font-size: 1rem; padding: 9px 10px; border-radius: 2px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color: #fff; }
+.svc-calc select option { color: #201f1e; }
+.sc-out { display: flex; flex-direction: column; border-top: 1px solid rgba(255,255,255,.2); padding-top: 10px; color: #c7e0f4; font-size: .88rem; }
+.sc-out strong { color: #fff; font-size: 1.9rem; font-weight: 600; line-height: 1.2; }
+.svc-calc .btn { justify-content: center; }
+.addon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.addon { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--azure); border-radius: var(--radius); padding: 18px; box-shadow: var(--depth-4); }
+.addon h4 { margin: 0 0 8px; font-size: 1rem; font-weight: 600; }
+.addon-price strong { font-size: 1.35rem; font-weight: 600; color: var(--azure-pressed); }
+.addon-price span { color: var(--muted); font-size: .85rem; }
+.addon p { margin: 8px 0 0; color: var(--text-2); font-size: .9rem; }
+@media (max-width: 1100px) { .addon-grid { grid-template-columns: repeat(2, 1fr); } .svc-volume-grid { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .addon-grid { grid-template-columns: 1fr; } }

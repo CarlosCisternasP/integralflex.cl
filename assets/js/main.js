@@ -57,6 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const sop = new URLSearchParams(location.search).get('soporte');
+  const cf = document.getElementById('contactForm');
+  if (sop && cf) {
+    const [plan, users, total] = sop.split('|');
+    const sel = cf.querySelector('select[name=producto]');
+    if (sel) sel.value = 'ServicesDesk';
+    const msg = cf.querySelector('textarea[name=mensaje]');
+    if (msg) msg.value = `Solicito propuesta de soporte ServicesDesk:\n- Plan: ${plan}\n- Usuarios: ${users}\n- Total estimado: ${total} al mes + IVA`;
+  }
+
   const quote = document.getElementById('cotizar');
   if (quote) {
     const TIERS = [
