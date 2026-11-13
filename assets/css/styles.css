@@ -1703,3 +1703,32 @@ main > section:nth-of-type(even):not(.hero):not(.phero):not(.cta) {
 .module-matrix .matrix-card span { font-size: 0.82rem; }
 .matrix-indigo { background: var(--c-indigo); }
 .matrix-orange { background: var(--c-orange); }
+
+/* ---------- Panel del hero: estilo oscuro corporativo ---------- */
+.hero .hero-panel { justify-self: end; width: 100%; max-width: 500px; margin-top: 48px; }
+.hero .window-card { background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.04)); border: 1px solid rgba(255,255,255,.16); color: #fff; backdrop-filter: blur(8px); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+.hero .window-dots { border-bottom-color: rgba(255,255,255,.14); }
+.hero-panel-head { display: flex; flex-direction: column; margin: 0 0 16px; }
+.hero-panel-head strong { font-size: 1.05rem; font-weight: 600; color: #fff; }
+.hero-panel-head span { font-size: .85rem; color: rgba(255,255,255,.65); }
+.hero .module-matrix .matrix-card { box-shadow: none; border: 1px solid rgba(255,255,255,.12); }
+
+/* ---------- ServicesDesk (soporte remoto) ---------- */
+.svc-panel { background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.04)); border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); padding: 28px; color: #fff; backdrop-filter: blur(8px); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+.svc-panel-eyebrow { font-size: .75rem; letter-spacing: .12em; font-weight: 600; color: #8ad1ff; }
+.svc-panel ul { list-style: none; padding: 0; margin: 14px 0 18px; }
+.svc-panel li { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.10); font-size: .98rem; }
+.svc-panel li svg { flex: none; color: #6ccb5f; margin-top: 3px; }
+.svc-panel-price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; color: rgba(255,255,255,.75); font-size: .9rem; }
+.svc-panel-price strong { color: #fff; font-size: 1.7rem; font-weight: 600; }
+.phero-panel:has(.svc-panel) { justify-self: end; width: 100%; max-width: 440px; margin-top: 24px; }
+.svc-grid { grid-template-columns: repeat(5, 1fr); }
+.svc-fine { margin: 20px 0 0; text-align: center; color: var(--muted); font-size: .9rem; }
+.svc-plus { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
+.svc-plus-copy h2 { margin: 12px 0 10px; font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 600; line-height: 1.2; }
+.svc-plus-copy > p { color: var(--text-2); margin: 0 0 14px; }
+.svc-plus-copy .price-list { margin-bottom: 18px; }
+.svc-plus-shot { display: block; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--depth-16); }
+.svc-plus-shot img { display: block; width: 100%; height: auto; }
+@media (max-width: 1100px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } .svc-plus { grid-template-columns: 1fr; } .hero .hero-panel, .phero-panel:has(.svc-panel) { justify-self: stretch; max-width: none; margin-top: 0; } }
+@media (max-width: 720px) { .svc-grid { grid-template-columns: 1fr; } }
