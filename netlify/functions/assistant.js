@@ -170,9 +170,9 @@ exports.handler = async (event) => {
     if (answer === null) {
       return json(502, { error: "El asistente no está disponible en este momento. Escríbenos a contacto@integralflex.cl." }, origin);
     }
-    const sources = [...new Set(ctx.map((c) => c.p))]
-      .map((n) => KB.products.find((p) => p.name === n))
-      .filter(Boolean)
+    const na = norm(answer || "");
+    const sources = KB.products
+      .filter((p) => na.includes(norm(p.name)) || na.includes("/productos/" + p.slug + ".html"))
       .slice(0, 3)
       .map((p) => ({ name: p.name, page: p.page, manual: p.manual }));
     return json(200, { answer: answer || "No pude generar una respuesta. Intenta reformular la pregunta.", sources }, origin);
