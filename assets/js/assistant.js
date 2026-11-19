@@ -1,10 +1,11 @@
-// Asistente IA de integralflex.cl — widget flotante que consulta /.netlify/functions/assistant
+// Veneti IA — asistente de integralflex.cl: botón en el encabezado, barra en el hero y widget flotante que consulta /.netlify/functions/assistant
 (function () {
   if (window.__ifxAssistant) return;
   window.__ifxAssistant = true;
 
   const ENDPOINT = "/.netlify/functions/assistant";
   const STORE = "ifx-assistant-v1";
+  let openPanel = () => {};
   const SUGGEST = [
     "¿Qué aplicación me sirve para gestionar residuos?",
     "Tengo un restaurante, ¿qué me ofrecen?",
@@ -13,16 +14,16 @@
   ];
 
   const css = `
-  .ifx-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:10px;padding:12px 18px 12px 14px;border:0;border-radius:999px;background:#0078d4;color:#fff;font:600 15px/1 "Segoe UI",system-ui,sans-serif;box-shadow:0 6.4px 14.4px rgba(0,0,0,.18),0 1.2px 3.6px rgba(0,0,0,.14);cursor:pointer;transition:background .15s,transform .15s}
-  .ifx-fab:hover{background:#106ebe;transform:translateY(-1px)}
+  .ifx-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:12px;padding:15px 24px 15px 18px;border:0;border-radius:999px;background:linear-gradient(135deg,#0078d4,#5b3cc4);color:#fff;font:700 17px/1 "Segoe UI",system-ui,sans-serif;box-shadow:0 6.4px 14.4px rgba(0,0,0,.18),0 1.2px 3.6px rgba(0,0,0,.14);cursor:pointer;transition:background .15s,transform .15s}
+  .ifx-fab:hover{filter:brightness(1.08);transform:translateY(-1px)}
   .ifx-fab:focus-visible{outline:3px solid #9fd0ff;outline-offset:2px}
   .ifx-fab svg{flex:none}
   .ifx-fab .ifx-dot{width:8px;height:8px;border-radius:50%;background:#6ee7a8;box-shadow:0 0 0 3px rgba(110,231,168,.25)}
   .ifx-panel{position:fixed;right:20px;bottom:20px;z-index:9999;width:380px;max-width:calc(100vw - 32px);height:min(600px,calc(100vh - 40px));display:none;flex-direction:column;background:#fff;border:1px solid #e1dfdd;border-radius:12px;box-shadow:0 25.6px 57.6px rgba(0,0,0,.22),0 4.8px 14.4px rgba(0,0,0,.18);overflow:hidden;font:14px/1.5 "Segoe UI",system-ui,sans-serif;color:#1b1b1b}
   .ifx-panel.open{display:flex}
   .ifx-head{display:flex;align-items:center;gap:10px;padding:14px 14px 14px 16px;background:linear-gradient(135deg,#0b1f3a,#0f2b52);color:#fff}
-  .ifx-avatar{width:34px;height:34px;border-radius:50%;background:#0078d4;display:grid;place-items:center;flex:none}
-  .ifx-head strong{display:block;font-size:15px}
+  .ifx-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#0078d4,#5b3cc4);display:grid;place-items:center;flex:none}
+  .ifx-head strong{display:block;font-size:17px;letter-spacing:.2px}
   .ifx-head span{display:block;font-size:12px;color:#c7d6ea}
   .ifx-x{margin-left:auto;background:transparent;border:0;color:#fff;cursor:pointer;padding:6px;border-radius:6px;line-height:0}
   .ifx-x:hover{background:rgba(255,255,255,.12)}
@@ -51,6 +52,23 @@
   .ifx-send:disabled{background:#c8c6c4;cursor:default}
   .ifx-foot{padding:0 12px 10px;background:#fff;font-size:11px;color:#8a8886;display:flex;justify-content:space-between;gap:8px}
   .ifx-foot button{background:none;border:0;color:#605e5c;font-size:11px;cursor:pointer;text-decoration:underline;padding:0}
+  .vnt-nav{display:inline-flex;align-items:center;gap:9px;padding:10px 18px 10px 12px;margin-right:10px;border:0;border-radius:999px;background:linear-gradient(135deg,#0078d4,#5b3cc4);color:#fff;font:700 16px/1 "Segoe UI",system-ui,sans-serif;cursor:pointer;box-shadow:0 3.2px 7.2px rgba(0,0,0,.18);white-space:nowrap}
+  .vnt-nav:hover{filter:brightness(1.08)}
+  .vnt-nav:focus-visible,.vnt-bar button:focus-visible{outline:3px solid #9fd0ff;outline-offset:2px}
+  .vnt-nav .vnt-spark{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center}
+  .vnt-nav small{font-weight:500;opacity:.85;font-size:13px}
+  .hero-copy{min-width:0}
+  .vnt-bar{margin:22px 0 4px;max-width:620px;min-width:0;width:100%}
+  .vnt-bar form{min-width:0}
+  .vnt-bar-title{display:flex;align-items:center;gap:10px;color:#fff;font:700 20px/1.2 "Segoe UI",system-ui,sans-serif;margin-bottom:10px}
+  .vnt-bar-title span.vnt-badge{font:700 11px/1 "Segoe UI",system-ui,sans-serif;letter-spacing:.8px;background:linear-gradient(135deg,#0078d4,#5b3cc4);padding:5px 8px;border-radius:999px}
+  .vnt-bar form{display:flex;gap:8px;background:#fff;border-radius:12px;padding:7px;box-shadow:0 6.4px 14.4px rgba(0,0,0,.25)}
+  .vnt-bar input{flex:1;min-width:0;width:100%;border:0;outline:none;font:16px "Segoe UI",system-ui,sans-serif;padding:10px 10px;color:#1b1b1b;background:transparent}
+  .vnt-bar button{border:0;border-radius:9px;background:linear-gradient(135deg,#0078d4,#5b3cc4);color:#fff;font:700 15px "Segoe UI",system-ui,sans-serif;padding:0 18px;cursor:pointer;white-space:nowrap}
+  .vnt-bar .vnt-hints{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .vnt-bar .vnt-hints button{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff;font:500 13px "Segoe UI",system-ui,sans-serif;padding:6px 11px;border-radius:999px}
+  .vnt-bar .vnt-hints button:hover{background:rgba(255,255,255,.2)}
+  @media (max-width:720px){.vnt-bar button[type=submit]{padding:0 12px}.vnt-bar input{font-size:15px}.vnt-nav small{display:none}.vnt-nav{padding:9px 14px 9px 10px;font-size:15px}.vnt-bar-title{font-size:18px}}
   @media (max-width:520px){.ifx-panel{right:0;bottom:0;width:100vw;max-width:100vw;height:100dvh;border-radius:0}.ifx-fab{right:16px;bottom:16px}.ifx-fab .ifx-lbl{display:none}.ifx-fab{padding:14px}}
   @media (prefers-reduced-motion:reduce){.ifx-typing i{animation:none}.ifx-fab{transition:none}}
   `;
@@ -64,25 +82,47 @@
   const fab = document.createElement("button");
   fab.className = "ifx-fab";
   fab.type = "button";
-  fab.setAttribute("aria-label", "Abrir asistente virtual");
-  fab.innerHTML = ICON_CHAT + '<span class="ifx-lbl">¿Te ayudo?</span><span class="ifx-dot" aria-hidden="true"></span>';
+  fab.setAttribute("aria-label", "Abrir Veneti IA, asistente virtual");
+  fab.innerHTML = ICON_CHAT + '<span class="ifx-lbl">Veneti IA</span><span class="ifx-dot" aria-hidden="true"></span>';
 
   const panel = document.createElement("section");
   panel.className = "ifx-panel";
   panel.setAttribute("role", "dialog");
-  panel.setAttribute("aria-label", "Asistente virtual IntegralFlex");
+  panel.setAttribute("aria-label", "Veneti IA, asistente virtual de IntegralFlex");
   panel.innerHTML = `
-    <div class="ifx-head"><div class="ifx-avatar">${ICON_BOT}</div><div><strong>Asistente IntegralFlex</strong><span>Responde con los manuales de la suite</span></div>
-      <button class="ifx-x" type="button" aria-label="Cerrar asistente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <div class="ifx-head"><div class="ifx-avatar">${ICON_BOT}</div><div><strong>Veneti IA</strong><span>Asistente de IntegralFlex Suites</span></div>
+      <button class="ifx-x" type="button" aria-label="Cerrar Veneti IA"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
     <div class="ifx-body" aria-live="polite"></div>
     <form class="ifx-form"><label class="sr-only" for="ifxIn" style="position:absolute;left:-9999px">Tu pregunta</label>
-      <textarea id="ifxIn" rows="1" maxlength="800" placeholder="Escribe tu pregunta…"></textarea>
+      <textarea id="ifxIn" rows="1" maxlength="800" placeholder="Pregúntale a Veneti IA…"></textarea>
       <button class="ifx-send" type="submit" aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button></form>
-    <div class="ifx-foot"><span>Asistente con IA: puede equivocarse. Para cotizar, usa el formulario.</span><button type="button" class="ifx-reset">Nueva conversación</button></div>`;
+    <div class="ifx-foot"><span>Veneti IA puede equivocarse. Para cotizar, usa el formulario.</span><button type="button" class="ifx-reset">Nueva conversación</button></div>`;
   document.body.append(fab, panel);
   // Si la página tiene el botón flotante de WhatsApp, el asistente se ubica sobre él
   const wa = document.querySelector(".whatsapp-float");
   if (wa && getComputedStyle(wa).display !== "none") fab.style.bottom = (wa.getBoundingClientRect().height + 32) + "px";
+
+  const SPARK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg>';
+  const navActions = document.querySelector(".site-header .nav-actions");
+  if (navActions) {
+    const nb = document.createElement("button");
+    nb.type = "button"; nb.className = "vnt-nav"; nb.setAttribute("data-assistant", "");
+    nb.setAttribute("aria-label", "Pregúntale a Veneti IA");
+    nb.innerHTML = '<span class="vnt-spark">' + SPARK + '</span>Veneti IA <small>· pregúntame</small>';
+    navActions.prepend(nb);
+  }
+  const heroSlot = document.getElementById("veneti-hero");
+  if (heroSlot) {
+    heroSlot.className = "vnt-bar";
+    heroSlot.innerHTML = '<div class="vnt-bar-title">' + SPARK.replace('width="16" height="16"', 'width="22" height="22"') + 'Pregúntale a Veneti IA <span class="vnt-badge">NUEVO</span></div>' +
+      '<form><label for="vntIn" style="position:absolute;left:-9999px">Pregunta para Veneti IA</label><input id="vntIn" type="text" maxlength="800" placeholder="¿Qué aplicación necesita mi empresa?" autocomplete="off"><button type="submit">Preguntar</button></form>' +
+      '<div class="vnt-hints">' + ["Tengo un restaurante", "Gestión de residuos", "Precios para 10 usuarios"].map((h) => '<button type="button" data-assistant="' + h + '">' + h + '</button>').join("") + '</div>';
+    heroSlot.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const v = heroSlot.querySelector("input").value.trim();
+      openPanel(); if (v) { ask(v); heroSlot.querySelector("input").value = ""; }
+    });
+  }
 
   const body = panel.querySelector(".ifx-body");
   const form = panel.querySelector(".ifx-form");
@@ -134,7 +174,7 @@
 
   function welcome() {
     body.innerHTML = "";
-    bubble("assistant", "¡Hola! Soy el asistente de **IntegralFlex Suites**. Puedo contarte qué hace cada aplicación, para qué rubro sirve, cómo se usa y cuánto cuesta. ¿En qué te ayudo?");
+    bubble("assistant", "¡Hola! Soy **Veneti IA**, el asistente de IntegralFlex Suites. Puedo contarte qué hace cada aplicación, para qué rubro sirve, cómo se usa y cuánto cuesta. ¿En qué te ayudo?");
     const c = document.createElement("div");
     c.className = "ifx-chips";
     SUGGEST.forEach((q) => {
@@ -186,6 +226,7 @@
 
   const open = () => { panel.classList.add("open"); fab.style.display = "none"; if (!body.children.length) render(); setTimeout(() => input.focus(), 50); };
   const close = () => { panel.classList.remove("open"); fab.style.display = ""; fab.focus(); };
+  openPanel = open;
   fab.onclick = open;
   panel.querySelector(".ifx-x").onclick = close;
   panel.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
