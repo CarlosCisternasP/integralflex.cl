@@ -1,6 +1,6 @@
 // Asistente IA de integralflex.cl: responde con la información de los manuales y precios de la suite.
 // La API key de Anthropic se define en Netlify como variable de entorno ANTHROPIC_API_KEY (nunca en el código).
-// Opcional: ASSISTANT_MODEL para cambiar el modelo.
+// Opcional: ASSISTANT_MODEL para cambiar el modelo; ANTHROPIC_WORKSPACE_ID si la key no está asociada a un workspace.
 
 const KB = require("./kb.json");
 
@@ -136,7 +136,7 @@ exports.handler = async (event) => {
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
-      headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+      headers: { Authorization: `Bearer ${key}`, "anthropic-version": "2023-06-01", "content-type": "application/json", ...(process.env.ANTHROPIC_WORKSPACE_ID ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } : {}) },
       body: JSON.stringify({ model: MODEL, max_tokens: 700, system: SYSTEM, messages: msgs }),
     });
     if (!res.ok) {
