@@ -1,10 +1,21 @@
 // Asistente IA de integralflex.cl: responde con la información de los manuales y precios de la suite.
-// La API key de Anthropic se define en Netlify como variable de entorno ANTHROPIC_API_KEY (nunca en el código).
+// Proveedor de IA (variables de entorno en Netlify, nunca en el código):
+//   - OpenAI:    OPENAI_API_KEY           (modelo por defecto gpt-4.1-mini)
+//   - Anthropic: ANTHROPIC_API_KEY        (modelo por defecto claude-haiku-5-5)
+// Si están ambas, se usa ASSISTANT_PROVIDER ("openai" o "anthropic"); si no se indica, Anthropic.
 // Opcional: ASSISTANT_MODEL para cambiar el modelo; ANTHROPIC_WORKSPACE_ID si la key no está asociada a un workspace.
 
 const KB = require("./kb.json");
 
-const MODEL = process.env.ASSISTANT_MODEL || "claude-haiku-5-5";
+const PROVIDER = (() => {
+  const p = (process.env.ASSISTANT_PROVIDER || "").toLowerCase();
+  if (p === "openai" && process.env.OPENAI_API_KEY) return "openai";
+  if (p === "anthropic" && process.env.ANTHROPIC_API_KEY) return "anthropic";
+  if (process.env.ANTHROPIC_API_KEY) return "anthropic";
+  if (process.env.OPENAI_API_KEY) return "openai";
+  return null;
+})();
+const MODEL = process.env.ASSISTANT_MODEL || (PROVIDER === "openai" ? "gpt-4.1-mini" : "claude-haiku-5-5");
 const MAX_INPUT = 800;       // caracteres por mensaje del visitante
 const MAX_HISTORY = 10;      // mensajes de historial que se envían al modelo
 const TOP_CHUNKS = 6;        // fragmentos de manuales que se adjuntan por pregunta
@@ -97,6 +108,28 @@ const json = (code, body, origin) => ({
   body: JSON.stringify(body),
 });
 
+async function askAnthropic(msgs) {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${process.env.ANTHROPIC_API_KEY}`, "anthropic-version": "2023-06-01", "content-type": "application/json", ...(process.env.ANTHROPIC_WORKSPACE_ID ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } : {}) },
+    body: JSON.stringify({ model: MODEL, max_tokens: 700, system: SYSTEM, messages: msgs }),
+  });
+  if (!res.ok) { console.error("Anthropic error:", res.status, (await res.text()).slice(0, 500)); return null; }
+  const out = await res.json();
+  return (out.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
+}
+
+async function askOpenAI(msgs) {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, "content-type": "application/json" },
+    body: JSON.stringify({ model: MODEL, max_tokens: 700, temperature: 0.3, messages: [{ role: "system", content: SYSTEM }, ...msgs] }),
+  });
+  if (!res.ok) { console.error("OpenAI error:", res.status, (await res.text()).slice(0, 500)); return null; }
+  const out = await res.json();
+  return ((out.choices && out.choices[0] && out.choices[0].message && out.choices[0].message.content) || "").trim();
+}
+
 exports.handler = async (event) => {
   const origin = event.headers.origin || event.headers.Origin || "";
   const okOrigin = !origin || ALLOWED_ORIGINS.some((r) => r.test(origin));
@@ -106,8 +139,7 @@ exports.handler = async (event) => {
   if (event.httpMethod !== "POST") return json(405, { error: "Método no permitido" });
   if (!okOrigin) return json(403, { error: "Origen no permitido" });
 
-  const key = process.env.ANTHROPIC_API_KEY;
-  if (!key) return json(503, { error: "El asistente aún no está configurado." }, origin);
+  if (!PROVIDER) return json(503, { error: "El asistente aún no está configurado." }, origin);
 
   const ip = event.headers["x-nf-client-connection-ip"] || event.headers["x-forwarded-for"] || "anon";
   if (limited(ip)) return json(429, { error: "Has enviado muchas preguntas seguidas. Intenta de nuevo en unos minutos." }, origin);
@@ -134,17 +166,10 @@ exports.handler = async (event) => {
   msgs.push({ role: "user", content: `<fragmentos_de_manuales>\n${context}\n</fragmentos_de_manuales>\n\nPregunta del visitante: ${last.content}` });
 
   try {
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${key}`, "anthropic-version": "2023-06-01", "content-type": "application/json", ...(process.env.ANTHROPIC_WORKSPACE_ID ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } : {}) },
-      body: JSON.stringify({ model: MODEL, max_tokens: 700, system: SYSTEM, messages: msgs }),
-    });
-    if (!res.ok) {
-      console.error("Anthropic error:", res.status, (await res.text()).slice(0, 500));
+    const answer = PROVIDER === "openai" ? await askOpenAI(msgs) : await askAnthropic(msgs);
+    if (answer === null) {
       return json(502, { error: "El asistente no está disponible en este momento. Escríbenos a contacto@integralflex.cl." }, origin);
     }
-    const out = await res.json();
-    const answer = (out.content || []).filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
     const sources = [...new Set(ctx.map((c) => c.p))]
       .map((n) => KB.products.find((p) => p.name === n))
       .filter(Boolean)
