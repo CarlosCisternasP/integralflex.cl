@@ -1771,3 +1771,13 @@ main > section:nth-of-type(even):not(.hero):not(.phero):not(.cta) {
 .svc-plus-fig { margin: 0; }
 .svc-ticket-fig { margin: 28px 0 0; }
 .svc-ticket-fig + .shot-note { margin-top: 14px; }
+
+/* ---------- Aplicación gratuita (Surf Big-C) ---------- */
+.product-card .product-top.has-ribbon { padding-top: 46px; }
+.free-ribbon { position: absolute; top: 22px; left: -32px; width: 140px; transform: rotate(-45deg); background: linear-gradient(90deg, #f7b500, #ffd54a); color: #3b2a00; text-align: center; font-size: .66rem; font-weight: 800; letter-spacing: .08em; padding: 4px 0; box-shadow: 0 2px 6px rgba(0,0,0,.25); z-index: 2; }
+.free-note { display: inline-block; margin: 0 0 10px; padding: 4px 10px; border-radius: 999px; background: #fff4cc; color: #6b4e00; font-size: .78rem; font-weight: 600; }
+.free-pill { display: inline-block; margin: 0 0 12px; padding: 5px 12px; border-radius: 999px; background: linear-gradient(90deg, #f7b500, #ffd54a); color: #3b2a00; font-size: .8rem; font-weight: 700; letter-spacing: .02em; }
+.feature-grid.benefit-3 { grid-template-columns: repeat(3, 1fr); }
+.surf-benefits .benefit-card h3 { color: var(--azure-pressed); }
+@media (max-width: 900px) { .feature-grid.benefit-3 { grid-template-columns: 1fr; } }
+.surf-benefits .shot-note { margin-top: 20px; }
