@@ -64,8 +64,8 @@
           <h2>Qué es FishCool</h2>
         </div>
         <div class="overview-text reveal">
-          <p>FishCool digitaliza la experiencia completa de un restaurante gourmet de formato Kaitenzushi. Cada mesa cuenta con una tablet desde la que los comensales exploran el menú con imágenes, hacen su pedido directo a cocina y se entretienen con juegos mientras esperan, incluyendo puzzle y gachapon de premios.</p>
-          <p>Para la operación, el dashboard ejecutivo muestra ventas y actividad con gráficos en tiempo real, y el menú se administra desde el panel sin tocar código: platos, imágenes, categorías y disponibilidad se actualizan al instante en todas las mesas. La base PostgreSQL con esquema versionado permite actualizar el sistema sin perder datos.</p>
+          <p>FishCool digitaliza la operación completa de un restaurante de formato Kaitenzushi. Cada mesa tiene una tablet desde la que los comensales exploran el menú con fotos, piden porciones que llegan directo a cocina y juegan mientras esperan: al ganar liberan premios del gachapón, como un upgrade, un postre o una bebida.</p>
+          <p>Detrás de la sala, el sistema integra la cocina con semáforo de tiempos, el salón en línea, la caja por mesa, el inventario con compras y mermas, la fidelización de clientes frecuentes y las fichas técnicas con costo y margen de cada plato. El dashboard ejecutivo resume la operación y todo se configura desde el panel, sin tocar código.</p>
         </div>
       </div>
     </section>
@@ -79,34 +79,159 @@
         <div class="feature-grid">
           <article class="benefit-card reveal feature-card">
             <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-            <h3>Tablet de mesa</h3>
-            <p>Cada mesa pide desde su propia tablet, sin esperar al garzón, con carrito por comensal.</p>
-          </article>
-          <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-            <h3>Menú digital administrable</h3>
-            <p>Carta con imágenes y categorías gestionada desde el panel; los cambios aparecen al instante en todas las mesas.</p>
+            <h3>Tablet de autoservicio por mesa</h3>
+            <p>Cada mesa tiene su tablet con el menú en fotos, filtros por categoría (combinaciones, sushi, mariscos, pescados, postres), porciones pedidas y activas, estado de conexión y batería.</p>
           </article>
           <article class="benefit-card reveal feature-card">
             <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-            <h3>Experiencia y juegos</h3>
-            <p>Puzzle y gachapon integrados a la espera, pensados para el formato Kaitenzushi.</p>
+            <h3>Gachapón y juegos con premios</h3>
+            <p>Mientras esperan, los comensales juegan al gato, ahorcado, agilidad matemática y crucigrama. Al ganar se libera un premio (upgrade, postre o bebida) que se canjea desde la misma tablet.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
-            <h3>Pedidos directo a cocina</h3>
-            <p>El pedido viaja de la mesa a la cocina en línea, con estados de preparación.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4 0 7-3 7-7 0-5-5-8-6-13-2 3-3 5-3 7-1-1-2-2-2-4-2 2-3 5-3 8 0 5 3 9 7 9z"/></svg></div>
+            <h3>Cocina KDS con semáforo</h3>
+            <p>Los platos llegan a la pantalla de cocina con mesa, categoría, número de pedido y minutos de espera, en verde, amarillo o rojo según el tiempo; el cocinero los toma y los despacha.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg></div>
+            <h3>Salón en línea</h3>
+            <p>Plano de las 20 mesas con el número de platos activos de cada una y su intensidad (calma o máximo), para coordinar al equipo de sala.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3>Caja y cierre por mesa</h3>
+            <p>Cuenta de cada mesa con subtotal, descuento, propina, pagado y saldo; pagos con tarjeta, efectivo o transferencia y cierre de la mesa.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg></div>
+            <h3>Inventario, compras y mermas</h3>
+            <p>Stock vivo de insumos con mínimos y proveedor, reposición rápida con costo unitario, registro de mermas y red de proveedores con calidad y condiciones de pago.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <h3>Fidelización y fichas técnicas</h3>
+            <p>Clientes frecuentes por nivel y puntos con emisión de cupones, y fichas técnicas con el costo, precio y margen de cada plato, más alertas de los platos más rentables.</p>
           </article>
           <article class="benefit-card reveal feature-card">
             <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
             <h3>Dashboard ejecutivo</h3>
-            <p>Ventas y operación del día con gráficos Chart.js en tiempo real.</p>
+            <p>Tiempo promedio de preparación, platos del día, mesas activas, ranking de platos más vendidos y accesos directos a cada módulo de la operación.</p>
           </article>
           <article class="benefit-card reveal feature-card">
-            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-            <h3>Esquema versionado</h3>
-            <p>PostgreSQL con actualizaciones controladas (init-db / upgrade-db) sin pérdida de datos.</p>
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+            <h3>Configuración sin código</h3>
+            <p>Productos con imagen, categoría y precio; insumos con unidad y stock mínimo; usuarios por rol; registro de tablets por mesa y auditoría de eventos.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">ROLES</span>
+          <h2>Una vista para cada puesto</h2>
+          <p>Del comensal al administrador, cada persona trabaja en la pantalla que necesita.</p>
+        </div>
+        <div class="feature-grid benefit-3">
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <h3>Comensal</h3>
+            <p>Usa la tablet de su mesa: mira el menú, pide porciones, juega y canjea los premios que gana. No necesita usuario ni contraseña.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15h18"/><path d="M5 15a7 7 0 0 1 14 0"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="2" y1="19" x2="22" y2="19"/></svg></div>
+            <h3>Garzón</h3>
+            <p>Sigue el salón en línea, atiende las mesas con más actividad y entrega los premios canjeados.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4 0 7-3 7-7 0-5-5-8-6-13-2 3-3 5-3 7-1-1-2-2-2-4-2 2-3 5-3 8 0 5 3 9 7 9z"/></svg></div>
+            <h3>Cocina</h3>
+            <p>Trabaja sobre la pantalla KDS: toma cada plato, lo prepara y lo despacha respetando el semáforo de tiempos.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3>Caja</h3>
+            <p>Revisa la cuenta de cada mesa, registra pagos y propinas y cierra la sesión de la mesa.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg></div>
+            <h3>Bodega</h3>
+            <p>Controla el stock de insumos, registra compras recibidas y mermas y mantiene a los proveedores.</p>
+          </article>
+          <article class="benefit-card reveal feature-card">
+            <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Administrador</h3>
+            <p>Ve el dashboard ejecutivo y configura menú, insumos, usuarios, tablets y premios; revisa la auditoría de eventos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="capturas">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-pill">CAPTURAS</span>
+          <h2>Así se ve FishCool</h2>
+        </div>
+        <p class="shot-note reveal">Pantallas reales del sistema con datos de demostración: menú, pedidos, clientes y proveedores son ficticios.</p>
+        <div class="shot-gallery">
+          <figure class="shot reveal shot-wide">
+            <a href="../assets/img/capturas/fc-tablet.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-tablet.jpg" alt="FishCool: Tablet de mesa" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Tablet de mesa</strong>Menú visual por categorías, porciones pedidas y activas, estado de la tablet y premios listos para canjear.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-juegos.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-juegos.jpg" alt="FishCool: Juegos: El Gato" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Juegos: El Gato</strong>Desafío gachapón: el comensal gana rondas para liberar el premio de su mesa.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-mate.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-mate.jpg" alt="FishCool: Juegos: Agilidad matemática" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Juegos: Agilidad matemática</strong>Puzzle de operaciones que también libera premios; hay además ahorcado y crucigrama.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-wide">
+            <a href="../assets/img/capturas/fc-cocina.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-cocina.jpg" alt="FishCool: Cocina (KDS)" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Cocina (KDS)</strong>Cada plato con su mesa, categoría, número de pedido y minutos de espera, con semáforo de tiempos.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-salon.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-salon.jpg" alt="FishCool: Salón en línea" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Salón en línea</strong>Plano de las 20 mesas con platos activos e intensidad de cada una.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-caja.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-caja.jpg" alt="FishCool: Caja por mesa" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Caja por mesa</strong>Cuenta de la mesa con subtotal, propina, pagos y saldo, y el detalle de cada pedido.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-premios.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-premios.jpg" alt="FishCool: Premios del gachapón" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Premios del gachapón</strong>Control de entrega: premios liberados y canjeados por mesa, pedido y juego.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-tablets.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-tablets.jpg" alt="FishCool: Tablets por mesa" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Tablets por mesa</strong>Alta rápida de tablets, asignación a mesas y estado en línea, batería y cola.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-wide">
+            <a href="../assets/img/capturas/fc-admin.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-admin.jpg" alt="FishCool: Dashboard ejecutivo" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Dashboard ejecutivo</strong>Preparación promedio, platos del día, mesas activas y ranking de platos más vendidos.</figcaption>
+          </figure>
+          <figure class="shot reveal shot-wide">
+            <a href="../assets/img/capturas/fc-oper.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-oper.jpg" alt="FishCool: Operaciones: inventario vivo" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Operaciones: inventario vivo</strong>Stock de cada insumo con mínimo, proveedor y estado, y reposición rápida.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-oper-b.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-oper-b.jpg" alt="FishCool: Proveedores y alertas" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Proveedores y alertas</strong>Red de abastecimiento con calidad y condiciones, y señales de margen.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-oper-c.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-oper-c.jpg" alt="FishCool: Premios y fidelización" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Premios y fidelización</strong>Premios por canjear y clientes frecuentes con niveles, puntos y cupones.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-oper-d.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-oper-d.jpg" alt="FishCool: Fichas técnicas" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Fichas técnicas</strong>Costo, precio y margen de cada plato.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <a href="../assets/img/capturas/fc-config.jpg" target="_blank" rel="noopener"><img src="../assets/img/capturas/fc-config.jpg" alt="FishCool: Configuración" loading="lazy" width="1366" height="820"></a>
+            <figcaption><strong>Configuración</strong>Productos del menú con imagen, insumos de bodega, usuarios por rol y auditoría.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -120,10 +245,19 @@
         <div class="chip-list reveal">
           <span class="chip">Tablet de mesa</span>
           <span class="chip">Menú digital</span>
-          <span class="chip">Pedidos a cocina</span>
-          <span class="chip">Juegos (puzzle / gachapon)</span>
+          <span class="chip">Juegos y gachapón</span>
+          <span class="chip">Cocina KDS</span>
+          <span class="chip">Salón en línea</span>
+          <span class="chip">Caja por mesa</span>
+          <span class="chip">Premios</span>
+          <span class="chip">Tablets</span>
+          <span class="chip">Operaciones e inventario</span>
+          <span class="chip">Proveedores</span>
+          <span class="chip">Fidelización</span>
+          <span class="chip">Fichas técnicas</span>
           <span class="chip">Dashboard ejecutivo</span>
-          <span class="chip">Administración de menú</span>
+          <span class="chip">Configuración y roles</span>
+          <span class="chip">Auditoría</span>
         </div>
       </div>
     </section>
@@ -138,29 +272,29 @@
           <div class="timeline-item reveal">
             <div class="timeline-step">01</div>
             <div>
-              <strong>Sienta</strong>
-              <p>El comensal parte con la tablet de su mesa.</p>
+              <strong>Se sienta</strong>
+              <p>El comensal parte con la tablet de su mesa y explora el menú.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">02</div>
             <div>
               <strong>Pide</strong>
-              <p>Menú visual con pedido directo a cocina.</p>
+              <p>Las porciones llegan a la cocina KDS con su mesa y número de pedido.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">03</div>
             <div>
-              <strong>Disfruta</strong>
-              <p>Juegos y experiencia Kaitenzushi durante la espera.</p>
+              <strong>Juega y gana</strong>
+              <p>Juegos de espera que liberan premios canjeables en la mesa.</p>
             </div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-step">04</div>
             <div>
-              <strong>Mide</strong>
-              <p>Dashboard ejecutivo con la operación del día.</p>
+              <strong>Paga y se mide</strong>
+              <p>Caja cierra la mesa y el dashboard muestra la operación del día.</p>
             </div>
           </div>
         </div>
@@ -180,7 +314,7 @@
           </div>
           <div class="spec-item reveal">
             <h4>Panel</h4>
-            <p>Dashboard ejecutivo con Chart.js</p>
+            <p>Dashboard ejecutivo, KDS y caja en tiempo real</p>
           </div>
           <div class="spec-item reveal">
             <h4>Despliegue</h4>
@@ -188,7 +322,7 @@
           </div>
           <div class="spec-item reveal">
             <h4>Operación</h4>
-            <p>Tablets por mesa conectadas al servidor local o cloud</p>
+            <p>Tablets por mesa registradas con código, batería y cola de pedidos</p>
           </div>
         </div>
       </div>
