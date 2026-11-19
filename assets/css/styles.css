@@ -1781,3 +1781,30 @@ main > section:nth-of-type(even):not(.hero):not(.phero):not(.cta) {
 .surf-benefits .benefit-card h3 { color: var(--azure-pressed); }
 @media (max-width: 900px) { .feature-grid.benefit-3 { grid-template-columns: 1fr; } }
 .surf-benefits .shot-note { margin-top: 20px; }
+
+/* ---------- LegalFlex: tarjeta destacada a todo el ancho (tema de la app) ---------- */
+.lf-feature { grid-column: 1 / -1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 0; background: #101012; color: #f5f5f6; border-radius: var(--radius); overflow: hidden; box-shadow: 0 18px 50px rgba(16,16,18,.28); border-top: 4px solid #c51624; }
+.lf-left { padding: 32px 32px 26px; display: flex; flex-direction: column; gap: 12px; background: radial-gradient(120% 80% at 0% 0%, rgba(197,22,36,.22), transparent 60%), #101012; }
+.lf-brand { display: flex; align-items: center; gap: 12px; font-family: Georgia, "Times New Roman", serif; font-size: 1.6rem; font-weight: 700; color: #fff; }
+.lf-logo { width: 46px; height: 46px; border-radius: 10px; background: #c51624; display: grid; place-items: center; color: #fff; box-shadow: 0 0 22px rgba(197,22,36,.55); }
+.lf-new { font-family: Inter, "Segoe UI", sans-serif; font-size: .66rem; letter-spacing: .1em; background: #fff0f1; color: #9f101b; padding: 3px 8px; border-radius: 3px; margin-left: auto; }
+.lf-eyebrow { margin: 4px 0 0; color: #ff8a93; font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.lf-feature h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.65rem; line-height: 1.2; margin: 0; color: #fff; font-weight: 700; }
+.lf-lead { color: #c9c9cf; margin: 0; line-height: 1.6; }
+.lf-shot { margin-top: 6px; border-radius: 8px; overflow: hidden; border: 1px solid #2a2a2e; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+.lf-shot img { display: block; width: 100%; height: auto; }
+.lf-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.lf-btn { display: inline-flex; align-items: center; gap: 6px; padding: 11px 18px; border-radius: 6px; font-weight: 700; font-size: .92rem; text-decoration: none; transition: background .15s, transform .15s; }
+.lf-btn-primary { background: #c51624; color: #fff; box-shadow: 0 6px 18px rgba(197,22,36,.4); }
+.lf-btn-primary:hover { background: #9f101b; transform: translateY(-1px); }
+.lf-btn-ghost { border: 1px solid #3f3f46; color: #f5f5f6; }
+.lf-btn-ghost:hover { border-color: #c51624; background: rgba(197,22,36,.12); }
+.lf-url { color: #8b8b93; font-size: .82rem; text-decoration: none; }
+.lf-url:hover { color: #fff; }
+.lf-list { list-style: none; margin: 0; padding: 30px 30px 26px; background: #f5f5f6; color: #141416; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; align-content: center; }
+.lf-list li { display: flex; gap: 10px; padding: 12px 0; border-bottom: 1px solid #dedee2; }
+.lf-list strong { font-family: Georgia, "Times New Roman", serif; font-size: 1rem; color: #101012; }
+.lf-list p { margin: 3px 0 0; font-size: .86rem; color: #6d6d74; line-height: 1.45; }
+.lf-ck { flex: none; width: 24px; height: 24px; border-radius: 50%; background: #fff0f1; color: #c51624; display: grid; place-items: center; margin-top: 1px; }
+@media (max-width: 1100px) { .lf-feature { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .lf-list { grid-template-columns: 1fr; padding: 22px; } .lf-left { padding: 24px 22px; } .lf-feature h3 { font-size: 1.35rem; } }
