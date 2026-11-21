@@ -35,5 +35,8 @@ add('Precios','Planes y precios de la suite',pl.get_text('\n',strip=True))
 sv=B(open('productos/servicesdesk.html',encoding='utf-8'),'html.parser').select_one('main') or B(open('productos/servicesdesk.html',encoding='utf-8'),'html.parser').body
 for x in sv.select('script,nav,footer,header'):x.decompose()
 add('ServiceDesk (soporte remoto)','Servicio de soporte remoto ServiceDesk',sv.get_text('\n',strip=True))
+# preguntas frecuentes curadas (tools/faq.json)
+for f in json.load(open('tools/faq.json',encoding='utf-8')):
+    chunks.append(dict(p='Preguntas frecuentes',t=f['t'],x=f['x'],k=f['k']))
 json.dump(dict(products=prods,chunks=chunks),open('netlify/functions/kb.json','w',encoding='utf-8'),ensure_ascii=False)
 print(len(prods),len(chunks),sum(len(c['x']) for c in chunks))
